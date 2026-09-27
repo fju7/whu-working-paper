@@ -229,7 +229,7 @@ The external bibliography is frozen to the reviewed state-of-field ledger. Repos
 9. Cochrane. [Cochrane Handbook for Systematic Reviews of Interventions, Chapter 4: Searching for and selecting studies](https://training.cochrane.org/handbook/current/chapter-04).
 10. McGowan, J. et al. [PRESS peer review of electronic search strategies: 2015 guideline statement](https://doi.org/10.1016/j.jclinepi.2016.01.021).
 11. Page, M. J. et al. [ROB-ME: a tool for assessing risk of bias due to missing evidence in a synthesis](https://www.riskofbias.info/welcome/rob-me-tool).
-12. Google Research. [Sufficient context: A new lens on retrieval augmented generation systems](https://research.google/blog/sufficient-context-a-new-lens-on-retrieval-augmented-generation-systems/).
+12. Google Research. [Sufficient context: A new lens on retrieval augmented generation systems](https://research.google/pubs/sufficient-context-a-new-lens-on-retrieval-augmented-generation-systems/).
 13. Geifman, Y., and El-Yaniv, R. [Selective classification for deep neural networks](https://arxiv.org/abs/1705.08500).
 14. Burns, C. et al. [Weak-to-strong generalization: Eliciting strong capabilities with weak supervision](https://openai.com/index/weak-to-strong-generalization/).
 15. Kenton, Z. et al. [On scalable oversight with weak LLMs judging strong LLMs](https://arxiv.org/abs/2407.04622).

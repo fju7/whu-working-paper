@@ -49,7 +49,7 @@ Status: owner-authorized Working Paper v1.0 release.
 - [x] approve conflict-of-interest statement;
 - [x] apply CC BY 4.0 to Fred-owned paper/documentation/figures; do not invent a software/data license;
 - [x] exclude all raw provider artifacts;
-- [x] approve citation metadata, repository URL, no-DOI release plan, and `working-paper-v1.0` tag;
+- [x] approve citation metadata, repository URL, no-DOI release plan, and immutable release tags;
 - [x] give explicit authorization for the exact clean release commit.
 
 No DOI was created because no already configured archive integration was available. Journal or

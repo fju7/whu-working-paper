@@ -2,14 +2,14 @@ cff-version: 1.2.0
 message: "If you use this working paper, please cite it using the metadata below."
 title: "Reasoning Over Evidence Is Not Assurance That the Evidence Was Acquired"
 type: article
-version: "1.0"
-date-released: 2026-09-26
+version: "1.0.1"
+date-released: 2026-09-27
 authors:
   - family-names: Ugast
     given-names: Frederick
     affiliation: Independent Researcher
 repository-code: "https://github.com/fju7/whu-working-paper"
-url: "https://github.com/fju7/whu-working-paper/releases/tag/working-paper-v1.0"
+url: "https://github.com/fju7/whu-working-paper/releases/tag/working-paper-v1.0.1"
 license: CC-BY-4.0
 abstract: >-
   An exploratory empirical and methodological case study distinguishing reasoning over supplied

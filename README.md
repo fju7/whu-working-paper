@@ -1,6 +1,6 @@
 # Reasoning Over Evidence Is Not Assurance That the Evidence Was Acquired
 
-**Working Paper v1.0 — September 2026**
+**Working Paper v1.0.1 — September 2026**
 
 **Frederick Ugast — Independent Researcher**
 
@@ -14,6 +14,7 @@ empirical and methodological case study from WhatHoldsUp.
 - [Reproduce the deterministic checks](docs/research/working-paper/WHU_WORKING_PAPER_REPRODUCTION.md)
 - [Read disclosures and availability boundaries](docs/research/working-paper/WHU_WORKING_PAPER_AVAILABILITY_AND_DISCLOSURE.md)
 - [Verify the public inventory and hashes](docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_ARTIFACT_MANIFEST.json)
+- [Read the correction history](CORRECTIONS.md)
 
 The paper and package have **not undergone independent human peer review**. The documented
 methodological and reproducibility reviews were performed in context-separated AI-agent sessions.
