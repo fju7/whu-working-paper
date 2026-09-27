@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "what-holds-up"
+version = "0.1.0"
+description = "A versioned, observable research and publication core"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3>=1.35,<2",
+    "cryptography>=44,<47",
+    "gunicorn>=23,<24",
+    "psycopg[binary]>=3.2,<4",
+    "pypdf>=6,<7",
+]
+
+[project.scripts]
+whu-reviewer = "whu_core.reviewer_app:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+    "ruff>=0.8,<1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+whu_core = ["static/*.html", "static/*.css", "static/*.js", "data/*.json"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_claim_strength_stage_a.py" = ["I001"]
+"tests/test_claim_strength_stage_bc.py" = ["E501", "I001"]
+"tests/test_cross_model_semantic_replication.py" = ["E501", "I001"]
+"tests/test_falsifier_identification.py" = ["E501", "I001"]
+"tests/test_known_gap_robustness.py" = ["E501", "I001"]
+"tests/test_closed_universe_evidence_acquisition_design.py" = ["E501", "E701", "E702", "I001"]
+"tools/run_claim_strength_stage_a.py" = ["E501"]
+"tools/run_claim_strength_stage_bc.py" = ["E501"]
+"tools/run_cross_model_semantic_replication.py" = ["E501"]
+"tools/run_falsifier_identification.py" = ["E501"]
+"tools/run_known_gap_robustness.py" = ["E501"]
+"tools/score_closed_universe_evidence_acquisition.py" = ["E501", "E701", "E702"]

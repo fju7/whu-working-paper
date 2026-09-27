@@ -1,0 +1,854 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "tools/build_working_paper_artifacts.py",
+  "network_calls": 0,
+  "model_calls": 0,
+  "entries": [
+    {
+      "cell_id": "F3.StageA.exact",
+      "reported_value": 10,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-a-v1.json",
+      "source_locator": "/metrics/counts/EXACT",
+      "source_sha256": "de3eb9d3be92945b46ebbf5736ecff9dc63da3c8c0ab6b302bde269d63c04c74",
+      "validity_role": "VALID_EMPIRICAL",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.StageA.overshoot",
+      "reported_value": 0,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-a-v1.json",
+      "source_locator": "/metrics/counts/CLAIM_OVERSHOOT",
+      "source_sha256": "de3eb9d3be92945b46ebbf5736ecff9dc63da3c8c0ab6b302bde269d63c04c74",
+      "validity_role": "VALID_EMPIRICAL",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.StageA.unnecessary_weakening",
+      "reported_value": 0,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-a-v1.json",
+      "source_locator": "/metrics/counts/UNNECESSARY_WEAKENING",
+      "source_sha256": "de3eb9d3be92945b46ebbf5736ecff9dc63da3c8c0ab6b302bde269d63c04c74",
+      "validity_role": "VALID_EMPIRICAL",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.StageB.exact",
+      "reported_value": 6,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/conditions/B_NO_GAP_DISCLOSURE/metrics/counts/EXACT",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.StageC.exact",
+      "reported_value": 10,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/conditions/C_TRUTHFUL_GAP_DISCLOSURE/metrics/counts/EXACT",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.StageB.overshoot",
+      "reported_value": 0,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/conditions/B_NO_GAP_DISCLOSURE/metrics/counts/CLAIM_OVERSHOOT",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.StageB.unnecessary_weakening",
+      "reported_value": 4,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/conditions/B_NO_GAP_DISCLOSURE/metrics/counts/UNNECESSARY_WEAKENING",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.StageC.overshoot",
+      "reported_value": 0,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/conditions/C_TRUTHFUL_GAP_DISCLOSURE/metrics/counts/CLAIM_OVERSHOOT",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.StageC.unnecessary_weakening",
+      "reported_value": 0,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/conditions/C_TRUTHFUL_GAP_DISCLOSURE/metrics/counts/UNNECESSARY_WEAKENING",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.StageBC.gate",
+      "reported_value": false,
+      "source_path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "source_locator": "/paired_metrics/stage_bc_gate_passed",
+      "source_sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.KnownGap.exact",
+      "reported_value": 5,
+      "source_path": "benchmark-results/known-gap-robustness-v1.json",
+      "source_locator": "/metrics/exact_calibration_count",
+      "source_sha256": "0f72311d154c81748be9d9328dd781eb50569072e9de097339fb8dbe00955341",
+      "validity_role": "VALID_EMPIRICAL",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.KnownGap.overshoot",
+      "reported_value": 0,
+      "source_path": "benchmark-results/known-gap-robustness-v1.json",
+      "source_locator": "/metrics/claim_overshoot_count",
+      "source_sha256": "0f72311d154c81748be9d9328dd781eb50569072e9de097339fb8dbe00955341",
+      "validity_role": "VALID_EMPIRICAL",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.KnownGap.unnecessary_weakening",
+      "reported_value": 0,
+      "source_path": "benchmark-results/known-gap-robustness-v1.json",
+      "source_locator": "/metrics/unnecessary_weakening_count",
+      "source_sha256": "0f72311d154c81748be9d9328dd781eb50569072e9de097339fb8dbe00955341",
+      "validity_role": "VALID_EMPIRICAL",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.Falsifier.true",
+      "reported_value": 9,
+      "source_path": "benchmark-results/falsifier-identification-v1.json",
+      "source_locator": "/metrics/true_falsifier_identification_count",
+      "source_sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "validity_role": "VALID_EMPIRICAL_MIXED",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.Falsifier.total",
+      "reported_value": 10,
+      "source_path": "benchmark-results/falsifier-identification-v1.json",
+      "source_locator": "/metrics/genuine_falsifier_count",
+      "source_sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "validity_role": "VALID_EMPIRICAL_MIXED",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.Falsifier.false",
+      "reported_value": 0,
+      "source_path": "benchmark-results/falsifier-identification-v1.json",
+      "source_locator": "/metrics/false_falsifier_count",
+      "source_sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "validity_role": "VALID_EMPIRICAL_MIXED",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Falsifier.missed",
+      "reported_value": 1,
+      "source_path": "benchmark-results/falsifier-identification-v1.json",
+      "source_locator": "/metrics/missed_consequential_falsifier_count",
+      "source_sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "validity_role": "VALID_EMPIRICAL_MIXED",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Falsifier.correct_weakening",
+      "reported_value": 9,
+      "source_path": "benchmark-results/falsifier-identification-v1.json",
+      "source_locator": "/metrics/correct_weakening_level_count",
+      "source_sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "validity_role": "VALID_EMPIRICAL_MIXED",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.Astra.calibration",
+      "reported_value": 15,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/exact_calibration_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F3.Astra.falsifiers",
+      "reported_value": 10,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/genuine_falsifier_identification_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.Astra.overshoot",
+      "reported_value": 0,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/claim_overshoot_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.Astra.unnecessary_weakening",
+      "reported_value": 0,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/unnecessary_weakening_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.Astra.false_falsifiers",
+      "reported_value": 0,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/false_falsifier_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Astra.missed_falsifiers",
+      "reported_value": 0,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/missed_consequential_falsifier_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F4.claims",
+      "reported_value": 4,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/final_claim_exact_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F4.adequacy",
+      "reported_value": 4,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/adequacy_exact_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F4.gaps",
+      "reported_value": 4,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/known_gap_exact_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Acquisition.overshoot",
+      "reported_value": 0,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/claim_overshoot_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Acquisition.premature_stopping",
+      "reported_value": 0,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/premature_stopping_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Acquisition.over_searching",
+      "reported_value": 0,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/over_searching_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F4.recall",
+      "reported_value": 0.875,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/consequential_evidence_recall",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F4.burden",
+      "reported_value": 0.5458333333333333,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/irrelevant_acquisition_burden",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "display rounded to 0.5458",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F4.directed",
+      "reported_value": 0,
+      "source_path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "source_locator": "/falsifier_directed_search_count",
+      "source_sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "validity_role": "VALID_EMPIRICAL_FAILED_GATE",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_SOURCE_COUNT.coverage",
+      "reported_value": 91,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_SOURCE_COUNT/assured_count",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_SOURCE_COUNT.false_assurance_n",
+      "reported_value": 34,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_SOURCE_COUNT/false_assurance_numerator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_SOURCE_COUNT.false_assurance_d",
+      "reported_value": 91,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_SOURCE_COUNT/false_assurance_denominator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_BUDGET.coverage",
+      "reported_value": 239,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_BUDGET/assured_count",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_BUDGET.false_assurance_n",
+      "reported_value": 93,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_BUDGET/false_assurance_numerator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_BUDGET.false_assurance_d",
+      "reported_value": 239,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_BUDGET/false_assurance_denominator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_RECENT_YIELD.coverage",
+      "reported_value": 17,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_RECENT_YIELD/assured_count",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_RECENT_YIELD.false_assurance_n",
+      "reported_value": 5,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_RECENT_YIELD/false_assurance_numerator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.B_RECENT_YIELD.false_assurance_d",
+      "reported_value": 17,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/B_RECENT_YIELD/false_assurance_denominator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.C_DECISION_TABLE.coverage",
+      "reported_value": 27,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/C_DECISION_TABLE/assured_count",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.C_DECISION_TABLE.false_assurance_n",
+      "reported_value": 7,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/C_DECISION_TABLE/false_assurance_numerator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.C_DECISION_TABLE.false_assurance_d",
+      "reported_value": 27,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/C_DECISION_TABLE/false_assurance_denominator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.C_LOGISTIC.coverage",
+      "reported_value": 191,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/C_LOGISTIC/assured_count",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.C_LOGISTIC.false_assurance_n",
+      "reported_value": 68,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/C_LOGISTIC/false_assurance_numerator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5A.C_LOGISTIC.false_assurance_d",
+      "reported_value": 191,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/comparators/C_LOGISTIC/false_assurance_denominator",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.primary.coverage",
+      "reported_value": 281,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/assurance_coverage/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.primary.coverage_denominator",
+      "reported_value": 1294,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/assurance_coverage/denominator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.primary.false_assurance_n",
+      "reported_value": 87,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/false_assurance/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.primary.false_assurance_d",
+      "reported_value": 281,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/false_assurance/denominator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.relative_reduction",
+      "reported_value": 0.2950451683547769,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/gate_inputs/relative_false_assurance_reduction",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "display percent rounded to 29.50%",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.chance_ratio",
+      "reported_value": 2.701923076923077,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/chance_agreement/observed_to_chance_ratio",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "display rounded to 2.702x",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Convergence.false_withholding_n",
+      "reported_value": 512,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/false_withholding/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Convergence.false_withholding_d",
+      "reported_value": 1013,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/false_withholding/denominator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.V3.calibration_rows",
+      "reported_value": 960,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/calibration_rows",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.V3.holdout_rows",
+      "reported_value": 240,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/holdout_rows",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.Falsifier.exact_cases",
+      "reported_value": 8,
+      "source_path": "benchmark-results/falsifier-identification-v1.json",
+      "source_locator": "/metrics/exact_case_count",
+      "source_sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "validity_role": "VALID_EMPIRICAL_MIXED",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Table2.Astra.exact_cases",
+      "reported_value": 9,
+      "source_path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "source_locator": "/model_summaries/gpt-6-astra/falsifier_exact_case_count",
+      "source_sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "validity_role": "DESCRIPTIVE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.COVERAGE_STOPPING.coverage",
+      "reported_value": 1134,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/COVERAGE_STOPPING/assurance_coverage/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.COVERAGE_STOPPING.false_assurance_n",
+      "reported_value": 520,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/COVERAGE_STOPPING/false_assurance/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.COVERAGE_STOPPING.false_assurance_d",
+      "reported_value": 1134,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/COVERAGE_STOPPING/false_assurance/denominator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.MARGINAL_YIELD.coverage",
+      "reported_value": 296,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/MARGINAL_YIELD/assurance_coverage/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.MARGINAL_YIELD.false_assurance_n",
+      "reported_value": 130,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/MARGINAL_YIELD/false_assurance/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.MARGINAL_YIELD.false_assurance_d",
+      "reported_value": 296,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/MARGINAL_YIELD/false_assurance/denominator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.SEARCH_VOLUME.coverage",
+      "reported_value": 1234,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/SEARCH_VOLUME/assurance_coverage/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.SEARCH_VOLUME.false_assurance_n",
+      "reported_value": 560,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/SEARCH_VOLUME/false_assurance/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "F5B.SEARCH_VOLUME.false_assurance_d",
+      "reported_value": 1234,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/baselines/SEARCH_VOLUME/false_assurance/denominator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.V3.total_rows",
+      "reported_value": 1200,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_CALIBRATION_RESET_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "producing 1,200 `(X,Y)` observations"
+      },
+      "source_sha256": "7e144016d5809aee28d421f3e5af1f82bcc18ba1278ff42fb113e89a3f65afaa",
+      "validity_role": "VALID_METHOD_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.V3.feature_count",
+      "reported_value": 8,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_CALIBRATION_RESET_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "X contains eight runtime-only features"
+      },
+      "source_sha256": "7e144016d5809aee28d421f3e5af1f82bcc18ba1278ff42fb113e89a3f65afaa",
+      "validity_role": "VALID_METHOD_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.Convergence.total_universes",
+      "reported_value": 1600,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "V2 uses 1,600 fresh, mechanically generated universes"
+      },
+      "source_sha256": "967067f4e6906105dbd2478cf91aee1a23440b6d7759988ac67b10fa41ad8d55",
+      "validity_role": "VALID_METHOD_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.Convergence.holdout_rows",
+      "reported_value": 306,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "306-case holdout passed all prospectively fixed class/cell floors"
+      },
+      "source_sha256": "967067f4e6906105dbd2478cf91aee1a23440b6d7759988ac67b10fa41ad8d55",
+      "validity_role": "GOVERNANCE_OBSERVATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Methods.Convergence.false_assurance_max",
+      "reported_value": "15%",
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_EMPIRICAL_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "prospectively frozen maximum false-assurance criterion was\n15%"
+      },
+      "source_sha256": "eb1164d94a6c159c4661996b05732694890dc58f4df7d2dc171bdb0b922b3b7c",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Routing.false_assurance",
+      "reported_value": "23/78 (29.49%)",
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_SELECTIVE_ESCALATION_ANALYSIS.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "23/78 = 29.49%"
+      },
+      "source_sha256": "fe835019805872dfe662196d5e460ca2b14924dee53199951cadd7fe928410dc",
+      "validity_role": "EXPLORATORY_POST_HOC_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Routing.escalated",
+      "reported_value": "162/240 (67.50%)",
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_SELECTIVE_ESCALATION_ANALYSIS.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "162/240 = 67.50%"
+      },
+      "source_sha256": "fe835019805872dfe662196d5e460ca2b14924dee53199951cadd7fe928410dc",
+      "validity_role": "EXPLORATORY_POST_HOC_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.Routing.target_not_reached",
+      "reported_value": "10%",
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_SELECTIVE_ESCALATION_ANALYSIS.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "threshold achieved even 10% observed false assurance"
+      },
+      "source_sha256": "fe835019805872dfe662196d5e460ca2b14924dee53199951cadd7fe928410dc",
+      "validity_role": "EXPLORATORY_POST_HOC_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.AcquisitionForensic.affected_cases",
+      "reported_value": 2,
+      "source_path": "docs/research/CLOSED_UNIVERSE_EVIDENCE_ACQUISITION_FORENSIC_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "EA02 and EA04 missed one prospectively consequential positive record each"
+      },
+      "source_sha256": "f87073752431f6e0052f5ab99b60a9b62fa04155eae0e12ea0b7604d77772023",
+      "validity_role": "VALID_BOUNDED_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.AcquisitionForensic.missed_each",
+      "reported_value": 1,
+      "source_path": "docs/research/CLOSED_UNIVERSE_EVIDENCE_ACQUISITION_FORENSIC_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "missed one prospectively consequential positive record each"
+      },
+      "source_sha256": "f87073752431f6e0052f5ab99b60a9b62fa04155eae0e12ea0b7604d77772023",
+      "validity_role": "VALID_BOUNDED_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.AcquisitionForensic.intent_pair",
+      "reported_value": 2,
+      "source_path": "docs/research/CLOSED_UNIVERSE_EVIDENCE_ACQUISITION_FORENSIC_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "EA01/EA03 used non-weakening intent labels"
+      },
+      "source_sha256": "f87073752431f6e0052f5ab99b60a9b62fa04155eae0e12ea0b7604d77772023",
+      "validity_role": "VALID_BOUNDED_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Results.AcquisitionForensic.basis_pair",
+      "reported_value": 2,
+      "source_path": "docs/research/CLOSED_UNIVERSE_EVIDENCE_ACQUISITION_FORENSIC_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "EA02/EA04 used\n`SEEK_CLAIM_WEAKENING` with bases other than the hidden eligible sets"
+      },
+      "source_sha256": "f87073752431f6e0052f5ab99b60a9b62fa04155eae0e12ea0b7604d77772023",
+      "validity_role": "VALID_BOUNDED_ANALYSIS",
+      "transform": "none",
+      "verifier_result": "PASS"
+    }
+  ]
+}

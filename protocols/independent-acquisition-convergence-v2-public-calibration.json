@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0-public-calibration",
+  "experiment_id": "WHU-INDEPENDENT-ACQUISITION-CONVERGENCE-V2",
+  "scope": "CALIBRATION_ONLY__NO_GENERATION_OR_HOLDOUT_RECIPE",
+  "convergence_rule": {
+    "id": "CONVERGENCE_FIXED_V2",
+    "family_jaccard_min": 0.15,
+    "pivotal_jaccard_min": 0.1,
+    "evidence_class_coverage_min_each": 0.5,
+    "require_claim_band_agreement": true,
+    "require_contrary_presence_agreement": true
+  },
+  "baselines": {
+    "SEARCH_VOLUME": {"pooled_source_count_min": 15},
+    "MARGINAL_YIELD": {"pooled_recent_marginal_yield_max": 0.9},
+    "COVERAGE_STOPPING": {"evidence_class_coverage_min_each": 0.75}
+  },
+  "chance_agreement_comparator": {
+    "id": "FIXED_WITHIN_PARTITION_CYCLIC_SHIFT",
+    "ordering": "sha256(WHU_IAC_V2_CHANCE|observation_id)",
+    "shift": 137
+  },
+  "primary_gate": {
+    "maximum_false_assurance": 0.15,
+    "minimum_assurance_coverage": 0.1,
+    "minimum_relative_false_assurance_reduction_vs_best_eligible_baseline": 0.25,
+    "baseline_minimum_coverage": 0.1,
+    "minimum_convergence_rate_ratio_vs_fixed_permutation_chance": 1.25
+  }
+}

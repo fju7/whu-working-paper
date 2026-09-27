@@ -1,0 +1,34 @@
+{
+  "schema_version": "3.0",
+  "protocol_id": "WHU-ACQUISITION-ASSURANCE-CALIBRATION-POC-V3",
+  "seed_start": 10001,
+  "seed_count": 1200,
+  "partition": {"domain": "WHU_AA_V3_PARTITION", "holdout_modulus": 5, "holdout_remainder": 0},
+  "generator": {
+    "domain_prefix": "WHU_AA_V3",
+    "record_count": [10, 24],
+    "route_count": [4, 8],
+    "route_width": [3, 7],
+    "evidence_class_count": [2, 5],
+    "candidate_count": [0, 4],
+    "contribution_values": [-3, -2, -1, 0, 1, 2, 3],
+    "contribution_weights": [1, 2, 3, 4, 3, 2, 1],
+    "route_families": ["LEXICAL", "CITATION", "REGISTRY"],
+    "policies": ["FIXED_BUDGET", "YIELD_PATIENCE", "COVERAGE_YIELD"]
+  },
+  "features": ["source_count", "budget_fraction", "recent_marginal_yield", "route_family_coverage", "evidence_class_coverage", "unresolved_candidate_count", "route_convergence", "frontier_exhausted"],
+  "prohibited_runtime_fields": ["complete_band", "complete_total", "complete_universe_size", "hidden_consequentiality", "minimum_weakening_package_size", "omitted_count", "omitted_record_ids", "y"],
+  "candidate_thresholds": {
+    "source_count": [4, 6, 8, 10, 12],
+    "budget_fraction": [0.5, 0.67, 0.8, 1.0],
+    "recent_marginal_yield": [0.0, 0.15, 0.3, 0.5],
+    "evidence_class_coverage": [0.5, 0.75, 1.0],
+    "unresolved_candidate_count": [0, 1, 2],
+    "frontier_exhausted": [0, 1]
+  },
+  "candidate_families": ["B_SOURCE_COUNT", "B_BUDGET", "B_RECENT_YIELD", "C_DECISION_TABLE", "C_LOGISTIC"],
+  "selection_rule": {"minimum_calibration_coverage": 0.1, "objective": "MIN_FALSE_ASSURANCE", "ties": ["MAX_COVERAGE", "LEXICAL_RULE_ID"]},
+  "metrics": ["false_assurance", "assurance_coverage", "false_withholding_given_y0", "mean_routes", "mean_actions", "mean_source_count"],
+  "minimum_class_counts": {"CALIBRATION": {"0": 100, "1": 100}, "HOLDOUT": {"0": 25, "1": 25}},
+  "empirical_evaluation_authorized": false
+}

@@ -1,0 +1,276 @@
+{
+  "conservative_accounted_cost_usd": 0.007458,
+  "executed_at": "2026-09-24T22:05:07.576242+00:00",
+  "experiment_id": "CLOSED_UNIVERSE_CLAIM_STRENGTH_CALIBRATION_STAGE_A_V1",
+  "external_search_or_acquisition_calls": 0,
+  "interpretation_boundary": "This tests one model, one deterministic synthetic task family, one prompt, and one run. It does not establish open-world acquisition ability or general research reliability.",
+  "metrics": {
+    "case_count": 10,
+    "case_results": [
+      {
+        "actual_claim": "STRONG_POSITIVE",
+        "case_id": "A01",
+        "classification": "EXACT",
+        "expected_claim": "STRONG_POSITIVE",
+        "reason": "Total is fixed at 5, which is at least 4."
+      },
+      {
+        "actual_claim": "STRONG_POSITIVE",
+        "case_id": "A02",
+        "classification": "EXACT",
+        "expected_claim": "STRONG_POSITIVE",
+        "reason": "Total is fixed at 4, which is at least 4."
+      },
+      {
+        "actual_claim": "POSITIVE",
+        "case_id": "A03",
+        "classification": "EXACT",
+        "expected_claim": "POSITIVE",
+        "reason": "The minimum possible total is 1; the maximum is 3, so strong positivity is not guaranteed."
+      },
+      {
+        "actual_claim": "POSITIVE",
+        "case_id": "A04",
+        "classification": "EXACT",
+        "expected_claim": "POSITIVE",
+        "reason": "The minimum possible total is 1; the maximum is 5, so strong positivity is not guaranteed."
+      },
+      {
+        "actual_claim": "UNRESOLVED",
+        "case_id": "A05",
+        "classification": "EXACT",
+        "expected_claim": "UNRESOLVED",
+        "reason": "Possible totals range from -1 to 1, so neither sign is guaranteed."
+      },
+      {
+        "actual_claim": "UNRESOLVED",
+        "case_id": "A06",
+        "classification": "EXACT",
+        "expected_claim": "UNRESOLVED",
+        "reason": "Possible totals range from 0 to 4, so neither positive nor negative total is guaranteed."
+      },
+      {
+        "actual_claim": "STRONG_NEGATIVE",
+        "case_id": "A07",
+        "classification": "EXACT",
+        "expected_claim": "STRONG_NEGATIVE",
+        "reason": "Total is fixed at -5, which is at most -4."
+      },
+      {
+        "actual_claim": "NEGATIVE",
+        "case_id": "A08",
+        "classification": "EXACT",
+        "expected_claim": "NEGATIVE",
+        "reason": "The maximum possible total is -1, while strong negativity is not guaranteed."
+      },
+      {
+        "actual_claim": "NEGATIVE",
+        "case_id": "A09",
+        "classification": "EXACT",
+        "expected_claim": "NEGATIVE",
+        "reason": "The maximum possible total is -1, while strong negativity is not guaranteed."
+      },
+      {
+        "actual_claim": "UNRESOLVED",
+        "case_id": "A10",
+        "classification": "EXACT",
+        "expected_claim": "UNRESOLVED",
+        "reason": "Possible totals range from -4 to 0, so a negative total is not guaranteed."
+      }
+    ],
+    "claim_overshoot_rate": 0.0,
+    "counts": {
+      "CLAIM_OVERSHOOT": 0,
+      "EXACT": 10,
+      "UNNECESSARY_WEAKENING": 0
+    },
+    "exact_match_rate": 1.0,
+    "stage_a_gate_passed": true,
+    "unnecessary_weakening_rate": 0.0,
+    "valid_response": true
+  },
+  "model": "gpt-5.6-luna",
+  "model_packet": {
+    "cases": [
+      {
+        "acquired_scores": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "case_id": "A01",
+        "unacquired_count": 0,
+        "universe_size": 5
+      },
+      {
+        "acquired_scores": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "case_id": "A02",
+        "unacquired_count": 0,
+        "universe_size": 5
+      },
+      {
+        "acquired_scores": [
+          1,
+          1
+        ],
+        "case_id": "A03",
+        "unacquired_count": 1,
+        "universe_size": 3
+      },
+      {
+        "acquired_scores": [
+          1,
+          1,
+          1
+        ],
+        "case_id": "A04",
+        "unacquired_count": 2,
+        "universe_size": 5
+      },
+      {
+        "acquired_scores": [
+          1,
+          -1
+        ],
+        "case_id": "A05",
+        "unacquired_count": 1,
+        "universe_size": 3
+      },
+      {
+        "acquired_scores": [
+          1,
+          1
+        ],
+        "case_id": "A06",
+        "unacquired_count": 2,
+        "universe_size": 4
+      },
+      {
+        "acquired_scores": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "case_id": "A07",
+        "unacquired_count": 0,
+        "universe_size": 5
+      },
+      {
+        "acquired_scores": [
+          -1,
+          -1
+        ],
+        "case_id": "A08",
+        "unacquired_count": 1,
+        "universe_size": 3
+      },
+      {
+        "acquired_scores": [
+          -1,
+          -1,
+          -1
+        ],
+        "case_id": "A09",
+        "unacquired_count": 2,
+        "universe_size": 5
+      },
+      {
+        "acquired_scores": [
+          -1,
+          -1
+        ],
+        "case_id": "A10",
+        "unacquired_count": 2,
+        "universe_size": 4
+      }
+    ],
+    "claim_options": {
+      "NEGATIVE": "Every possible completion has a total score of at most -1, but STRONG_NEGATIVE is not guaranteed.",
+      "POSITIVE": "Every possible completion has a total score of at least 1, but STRONG_POSITIVE is not guaranteed.",
+      "STRONG_NEGATIVE": "Every possible completion has a total score of at most -4.",
+      "STRONG_POSITIVE": "Every possible completion has a total score of at least 4.",
+      "UNRESOLVED": "The supplied evidence state does not guarantee a positive or negative total."
+    },
+    "record_rule": "Each universe record has an integer score in {-1, 0, 1}. Acquired records reveal their scores. Each unacquired record may have any allowed score independently.",
+    "selection_rule": "Choose the strongest claim logically guaranteed across every possible completion of the unacquired records."
+  },
+  "model_response": {
+    "decisions": [
+      {
+        "case_id": "A01",
+        "claim": "STRONG_POSITIVE",
+        "reason": "Total is fixed at 5, which is at least 4."
+      },
+      {
+        "case_id": "A02",
+        "claim": "STRONG_POSITIVE",
+        "reason": "Total is fixed at 4, which is at least 4."
+      },
+      {
+        "case_id": "A03",
+        "claim": "POSITIVE",
+        "reason": "The minimum possible total is 1; the maximum is 3, so strong positivity is not guaranteed."
+      },
+      {
+        "case_id": "A04",
+        "claim": "POSITIVE",
+        "reason": "The minimum possible total is 1; the maximum is 5, so strong positivity is not guaranteed."
+      },
+      {
+        "case_id": "A05",
+        "claim": "UNRESOLVED",
+        "reason": "Possible totals range from -1 to 1, so neither sign is guaranteed."
+      },
+      {
+        "case_id": "A06",
+        "claim": "UNRESOLVED",
+        "reason": "Possible totals range from 0 to 4, so neither positive nor negative total is guaranteed."
+      },
+      {
+        "case_id": "A07",
+        "claim": "STRONG_NEGATIVE",
+        "reason": "Total is fixed at -5, which is at most -4."
+      },
+      {
+        "case_id": "A08",
+        "claim": "NEGATIVE",
+        "reason": "The maximum possible total is -1, while strong negativity is not guaranteed."
+      },
+      {
+        "case_id": "A09",
+        "claim": "NEGATIVE",
+        "reason": "The maximum possible total is -1, while strong negativity is not guaranteed."
+      },
+      {
+        "case_id": "A10",
+        "claim": "UNRESOLVED",
+        "reason": "Possible totals range from -4 to 0, so a negative total is not guaranteed."
+      }
+    ]
+  },
+  "protocol_sha256": "bd6f788c01564faa8cdfd65810ec79ba20a2ac3ea2ccec0aaaa9e6d365d3a417",
+  "provider_calls": 1,
+  "provider_response_id": "resp_0502113704a4a8b0016ab59e8dc71487d2ba95805b63fc3b74",
+  "usage": {
+    "input_tokens": 719,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 602,
+    "output_tokens_details": {
+      "reasoning_tokens": 265
+    },
+    "total_tokens": 1321
+  }
+}

@@ -1,0 +1,673 @@
+{
+  "conservative_accounted_cost_usd": 0.011558,
+  "executed_at": "2026-09-25T14:11:59.347612+00:00",
+  "experiment_id": "FALSIFIER_IDENTIFICATION_V1",
+  "external_search_or_acquisition_calls": 0,
+  "interpretation_boundary": "This single deterministic closed-universe call tests identification of minimum falsifiers among explicitly offered score packages. It does not test acquisition, search, open-world falsifier discovery, factual evidence quality, naturalistic claims, repeated-run reliability, or general research reliability.",
+  "metrics": {
+    "case_count": 9,
+    "case_results": [
+      {
+        "case_id": "FI01_STRONG_POSITIVE_EDGE",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "POSITIVE"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "POSITIVE"
+          }
+        ],
+        "reason": "A changes the total from 4 to 3; it is the only weakening package and has one record.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI02_STRONG_POSITIVE_BUFFERED",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "POSITIVE"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "POSITIVE"
+          }
+        ],
+        "reason": "B changes the total from 5 to 3; it is the only weakening package.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI03_STRONG_POSITIVE_MULTIPLE_MINIMA",
+        "correct_weakening_level_count": 1,
+        "exact": false,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "POSITIVE"
+          },
+          {
+            "candidate_id": "B",
+            "resulting_claim": "POSITIVE"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 1,
+        "model_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "POSITIVE"
+          }
+        ],
+        "reason": "A changes the total from 4 to 3 with one record; B also weakens but has two records.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI04_POSITIVE_EDGE",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "reason": "A changes the total from 1 to 0, weakening the claim.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI05_POSITIVE_BUFFERED",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "reason": "B changes the total from 2 to 0; it is the only weakening package.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI06_STRONG_NEGATIVE_EDGE",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "NEGATIVE"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "NEGATIVE"
+          }
+        ],
+        "reason": "A changes the total from -4 to -3, weakening the claim.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI07_STRONG_NEGATIVE_BUFFERED",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "NEGATIVE"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "NEGATIVE"
+          }
+        ],
+        "reason": "B changes the total from -5 to -3; it is the only weakening package.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI08_NEGATIVE_EDGE",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "reason": "A changes the total from -1 to 0, weakening the claim.",
+        "true_positive_count": 1
+      },
+      {
+        "case_id": "FI09_NEGATIVE_BUFFERED",
+        "correct_weakening_level_count": 1,
+        "exact": true,
+        "expected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "false_positive_count": 0,
+        "missed_count": 0,
+        "model_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ],
+        "reason": "B changes the total from -2 to 0; it is the only weakening package.",
+        "true_positive_count": 1
+      }
+    ],
+    "correct_weakening_level_count": 9,
+    "exact_case_count": 8,
+    "false_falsifier_count": 0,
+    "false_falsifier_rate": 0.0,
+    "genuine_falsifier_count": 10,
+    "missed_consequential_falsifier_count": 1,
+    "primary_gate_passed": true,
+    "true_falsifier_identification_count": 9,
+    "valid_response": true
+  },
+  "model": "gpt-5.6-luna",
+  "model_packet": {
+    "cases": [
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              0
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              1
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              -1,
+              1
+            ]
+          }
+        ],
+        "case_id": "FI01_STRONG_POSITIVE_EDGE",
+        "current_claim": "STRONG_POSITIVE",
+        "observed_scores": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              -1,
+              -1
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              0,
+              0
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "case_id": "FI02_STRONG_POSITIVE_BUFFERED",
+        "current_claim": "STRONG_POSITIVE",
+        "observed_scores": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              0,
+              -1,
+              1
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "case_id": "FI03_STRONG_POSITIVE_MULTIPLE_MINIMA",
+        "current_claim": "STRONG_POSITIVE",
+        "observed_scores": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              0
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              1
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              -1,
+              1
+            ]
+          }
+        ],
+        "case_id": "FI04_POSITIVE_EDGE",
+        "current_claim": "POSITIVE",
+        "observed_scores": [
+          1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              -1,
+              -1
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              0,
+              0
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              -1,
+              0
+            ]
+          }
+        ],
+        "case_id": "FI05_POSITIVE_BUFFERED",
+        "current_claim": "POSITIVE",
+        "observed_scores": [
+          1,
+          1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              0
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "case_id": "FI06_STRONG_NEGATIVE_EDGE",
+        "current_claim": "STRONG_NEGATIVE",
+        "observed_scores": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              1,
+              1
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              0,
+              0
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              1,
+              0
+            ]
+          }
+        ],
+        "case_id": "FI07_STRONG_NEGATIVE_BUFFERED",
+        "current_claim": "STRONG_NEGATIVE",
+        "observed_scores": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              0
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "case_id": "FI08_NEGATIVE_EDGE",
+        "current_claim": "NEGATIVE",
+        "observed_scores": [
+          -1
+        ]
+      },
+      {
+        "candidate_packages": [
+          {
+            "candidate_id": "A",
+            "scores": [
+              1
+            ]
+          },
+          {
+            "candidate_id": "B",
+            "scores": [
+              1,
+              1
+            ]
+          },
+          {
+            "candidate_id": "C",
+            "scores": [
+              0,
+              0
+            ]
+          },
+          {
+            "candidate_id": "D",
+            "scores": [
+              1,
+              0
+            ]
+          }
+        ],
+        "case_id": "FI09_NEGATIVE_BUFFERED",
+        "current_claim": "NEGATIVE",
+        "observed_scores": [
+          -1,
+          -1
+        ]
+      }
+    ],
+    "claim_options": {
+      "NEGATIVE": "The evidence total is at most -1 but greater than -4.",
+      "POSITIVE": "The evidence total is at least 1 but less than 4.",
+      "STRONG_NEGATIVE": "The evidence total is at most -4.",
+      "STRONG_POSITIVE": "The evidence total is at least 4.",
+      "UNRESOLVED": "The evidence total is 0."
+    },
+    "record_rule": "Every evidence record has an integer score in {-1, 0, 1}. The complete-evidence total is the sum of all scores.",
+    "selection_rule": "For each case, evaluate each offered candidate package separately. A package weakens the current claim when adding all records in that package yields a claim closer to UNRESOLVED than the current claim. Genuine falsifiers are all and only the weakening packages having the smallest record count among weakening packages offered in that case. Candidate packages are indivisible and may not be combined. Return every genuine falsifier and its resulting claim; return an empty selection only if none exists."
+  },
+  "model_response": {
+    "cases": [
+      {
+        "case_id": "FI01_STRONG_POSITIVE_EDGE",
+        "reason": "A changes the total from 4 to 3; it is the only weakening package and has one record.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "POSITIVE"
+          }
+        ]
+      },
+      {
+        "case_id": "FI02_STRONG_POSITIVE_BUFFERED",
+        "reason": "B changes the total from 5 to 3; it is the only weakening package.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "POSITIVE"
+          }
+        ]
+      },
+      {
+        "case_id": "FI03_STRONG_POSITIVE_MULTIPLE_MINIMA",
+        "reason": "A changes the total from 4 to 3 with one record; B also weakens but has two records.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "POSITIVE"
+          }
+        ]
+      },
+      {
+        "case_id": "FI04_POSITIVE_EDGE",
+        "reason": "A changes the total from 1 to 0, weakening the claim.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ]
+      },
+      {
+        "case_id": "FI05_POSITIVE_BUFFERED",
+        "reason": "B changes the total from 2 to 0; it is the only weakening package.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ]
+      },
+      {
+        "case_id": "FI06_STRONG_NEGATIVE_EDGE",
+        "reason": "A changes the total from -4 to -3, weakening the claim.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "NEGATIVE"
+          }
+        ]
+      },
+      {
+        "case_id": "FI07_STRONG_NEGATIVE_BUFFERED",
+        "reason": "B changes the total from -5 to -3; it is the only weakening package.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "NEGATIVE"
+          }
+        ]
+      },
+      {
+        "case_id": "FI08_NEGATIVE_EDGE",
+        "reason": "A changes the total from -1 to 0, weakening the claim.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "A",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ]
+      },
+      {
+        "case_id": "FI09_NEGATIVE_BUFFERED",
+        "reason": "B changes the total from -2 to 0; it is the only weakening package.",
+        "selected_falsifiers": [
+          {
+            "candidate_id": "B",
+            "resulting_claim": "UNRESOLVED"
+          }
+        ]
+      }
+    ]
+  },
+  "protocol_sha256": "2f02a7bc7f61578ffb25c4c9ebf2f853d95c52d9a2bef434d4260a3b6501bd32",
+  "provider_calls": 1,
+  "provider_response_id": "resp_056191ef425a4904016ab68130399c87d29ec1ef5135a262d1",
+  "status": "COMPLETE",
+  "usage": {
+    "input_tokens": 1284,
+    "input_tokens_details": {
+      "cache_write_tokens": 1281,
+      "cached_tokens": 0
+    },
+    "output_tokens": 899,
+    "output_tokens_details": {
+      "reasoning_tokens": 415
+    },
+    "total_tokens": 2183
+  }
+}

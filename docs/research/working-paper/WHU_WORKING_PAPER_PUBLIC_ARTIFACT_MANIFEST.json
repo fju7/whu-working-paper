@@ -1,0 +1,458 @@
+{
+  "schema_version": "1.0",
+  "candidate_identifier": "WHU-WP-2026-09-26-v1.0",
+  "reviewed_manuscript_baseline_commit": "1b2821f451dae0b895eb1c4f46b84e3638cf5636",
+  "audit_parent_commit": "bdb618a9fab611c2e88684822381071394f46650",
+  "release_authorized": true,
+  "network_calls": 0,
+  "model_or_provider_calls": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b9be1493d0178a2a442ac5469cd40be292dc35d08b29bfc1e6b7c3c4b1b8239a",
+      "bytes": 1442
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "b4eceb19fd8878cf6907415fa56dd720da1bf59c96d3348527c5dfafac67f583",
+      "bytes": 721
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "0b67b95e9b8f345fa81f2ae6e034ada55c03426d6b0df9e9496a6cca498f1e9e",
+      "bytes": 677
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "c6c238e91e353da57d5249642d95a8dcb6c78ce0384185d8549c90d3ebfd3df4",
+      "bytes": 1660
+    },
+    {
+      "path": "tools/build_working_paper_artifacts.py",
+      "sha256": "a719c24a8abca7446e3c8f8d20959909d4715f05a68bdc1ddb5081846b68692e",
+      "bytes": 22437
+    },
+    {
+      "path": "tools/render_working_paper.py",
+      "sha256": "82370783c0c61ebcf7221b0ece9083c805ad2bc65c9fea9cd63981624a9fae85",
+      "bytes": 3068
+    },
+    {
+      "path": "tools/verify_working_paper.py",
+      "sha256": "f93bad99fa62a69b290eef4bb2ebf67fdac641092ccf3809195450c57e187a63",
+      "bytes": 4272
+    },
+    {
+      "path": "tools/verify_working_paper_release.py",
+      "sha256": "f8b75f352b1b3a961758c9f8f49c15101e1826703a0df8bb724eb599b5bc0ac1",
+      "bytes": 13855
+    },
+    {
+      "path": "tools/verify_working_paper_rebuild.py",
+      "sha256": "33be3e02ca19707de0abc7dbe0aee3900dd46488158dd307fe5d4221c93a1933",
+      "bytes": 1150
+    },
+    {
+      "path": "tools/verify_working_paper_custody.py",
+      "sha256": "5ec76c51c1644510447b43d238535b4eab33d7cbc4a789cfe166eed48a240fd0",
+      "bytes": 3215
+    },
+    {
+      "path": "tools/recompute_working_paper_empirical_results.py",
+      "sha256": "2c728817e44d1563eefca3aa279f85f652f341e910870f3667bbc5e95902e2dc",
+      "bytes": 7070
+    },
+    {
+      "path": "tools/acquisition_assurance_v3.py",
+      "sha256": "b51bf240bc5f48826c381c2ae27021981c32fd85e1ed5d07b7e501fe6a5b589d",
+      "bytes": 17963
+    },
+    {
+      "path": "tools/acquisition_assurance_v3_score.py",
+      "sha256": "8087bf2b4f6be3be3860b16fa4d41e90e5f53abab6c0d13b6931d5e44f9b732d",
+      "bytes": 10589
+    },
+    {
+      "path": "tools/score_independent_acquisition_convergence_v2_public.py",
+      "sha256": "496c83cc16fbf2c366621401141c305022d367ed6165d5726164af504571cc1d",
+      "bytes": 7843
+    },
+    {
+      "path": "protocols/acquisition-assurance-calibration-poc-v3.json",
+      "sha256": "63ee5a72ed82eb7694ab36b85fc21d89d5a7eeee90784dc3fe01cf7b81819619",
+      "bytes": 1898
+    },
+    {
+      "path": "protocols/independent-acquisition-convergence-v2-public-calibration.json",
+      "sha256": "4873e5c5baa0659de3ad7073f9ece4a6e827fa253c1e7836605ef886ac2a4740",
+      "bytes": 1107
+    },
+    {
+      "path": "benchmarks/acquisition-assurance-calibration-poc-v3/generator-blueprints.jsonl",
+      "sha256": "dc6445c9a75f9f24ead45629522b53f4da7a42266c9217eaf6a1ba300e5d344c",
+      "bytes": 3387214
+    },
+    {
+      "path": "benchmarks/acquisition-assurance-calibration-poc-v3/runtime-observations.jsonl",
+      "sha256": "3314aa0c9aba69a48612672dcb351280afe715f84233efdf27faefe083cd45cd",
+      "bytes": 2111490
+    },
+    {
+      "path": "benchmarks/acquisition-assurance-calibration-poc-v3/evaluator-labels.jsonl",
+      "sha256": "fdcbc9f6e0290556cbb89c6efea10e56e5ecd1294bf20c73a6f7e24b003261d4",
+      "bytes": 233288
+    },
+    {
+      "path": "benchmarks/acquisition-assurance-calibration-poc-v3/frozen-calibration-model.json",
+      "sha256": "abf8031fc1ad7ed3dedc200c78b076bbfa42715d668d0217b7f5c75366ddbdf0",
+      "bytes": 3443
+    },
+    {
+      "path": "benchmarks/acquisition-assurance-calibration-poc-v3/holdout-results.json",
+      "sha256": "80039b38656235d651e11f4e3ed2ef83d358415344674383f7aba8009de25b3c",
+      "bytes": 2392
+    },
+    {
+      "path": "benchmarks/independent-acquisition-convergence-v2/generator-blueprints.jsonl",
+      "sha256": "7f642f720de5d04034cc8ac5e4e14455a3dde82b46da467d7f4cfacaaef8c486",
+      "bytes": 6482707
+    },
+    {
+      "path": "benchmarks/independent-acquisition-convergence-v2/calibration-runtime-observations.jsonl",
+      "sha256": "52583f288eee23b029ee9063915c88a5f63c9cb85653af837023869a7b7eda2b",
+      "bytes": 7384150
+    },
+    {
+      "path": "benchmarks/independent-acquisition-convergence-v2/calibration-labels.jsonl",
+      "sha256": "d57dd1c6e9fe6286d1bd98fc458c113be22519bc95245ed6079541c557a756df",
+      "bytes": 309652
+    },
+    {
+      "path": "benchmark-results/closed-universe-claim-strength-stage-a-v1.json",
+      "sha256": "de3eb9d3be92945b46ebbf5736ecff9dc63da3c8c0ab6b302bde269d63c04c74",
+      "bytes": 8120
+    },
+    {
+      "path": "benchmark-results/closed-universe-claim-strength-stage-bc-v1.json",
+      "sha256": "ce82ab47f779e286254e1f3d2f0fe182b225c3d6f150f0f1f2229d8deccce191",
+      "bytes": 23403
+    },
+    {
+      "path": "benchmark-results/cross-model-semantic-replication-v1.json",
+      "sha256": "90b534e51f73215bd1c574ed2df4bb5c89a1b4b359b77cae4a8350cb8ecd230c",
+      "bytes": 37135
+    },
+    {
+      "path": "benchmark-results/falsifier-identification-v1.json",
+      "sha256": "43cb47aa7e4633b177725dab4e184be5aac0b9bdd2b5fa19ae0ab7d11843b2a4",
+      "bytes": 17127
+    },
+    {
+      "path": "benchmark-results/known-gap-robustness-v1.json",
+      "sha256": "0f72311d154c81748be9d9328dd781eb50569072e9de097339fb8dbe00955341",
+      "bytes": 7667
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_CALIBRATION_RESET_CLOSEOUT.md",
+      "sha256": "7e144016d5809aee28d421f3e5af1f82bcc18ba1278ff42fb113e89a3f65afaa",
+      "bytes": 2944
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_CALIBRATION_EXECUTION_BLOCKER_CLOSEOUT.md",
+      "sha256": "fa1e731bc4f430cfe676aa2a742b5c243fc53b9e4d7e7b868eb5a07ec117c7f8",
+      "bytes": 3526
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_EXECUTABLE_SPECIFICATION_BLOCKER_CLOSEOUT.md",
+      "sha256": "e5e85e48dfff34e685873e978849953153018b72c7fc40d4f67897c297acae71",
+      "bytes": 3531
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_PROSPECTIVE_REVISION_BLOCKER_CLOSEOUT.md",
+      "sha256": "0a7e3e0c852a817e21e885b8065a86ca119adde2cf776611cd8b1efd094caeb3",
+      "bytes": 3588
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_SELECTIVE_ESCALATION_ANALYSIS.md",
+      "sha256": "fe835019805872dfe662196d5e460ca2b14924dee53199951cadd7fe928410dc",
+      "bytes": 7349
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_CLOSEOUT.md",
+      "sha256": "e1e9756bfa87693c58f41ee52fa3a4294f96f61fd64777ff084f5732c2bba702",
+      "bytes": 4132
+    },
+    {
+      "path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "bytes": 4859
+    },
+    {
+      "path": "docs/research/CLOSED_UNIVERSE_EVIDENCE_ACQUISITION_FORENSIC_CLOSEOUT.md",
+      "sha256": "f87073752431f6e0052f5ab99b60a9b62fa04155eae0e12ea0b7604d77772023",
+      "bytes": 1506
+    },
+    {
+      "path": "docs/research/CLOSED_UNIVERSE_EVIDENCE_ACQUISITION_V1_4_TERMINAL_CLOSEOUT.md",
+      "sha256": "c1590b5e569f2427392cd392b8ca473c57afe681e9c1baf8f3c5537bcffd3fe6",
+      "bytes": 3116
+    },
+    {
+      "path": "docs/research/CLAIM_CHANGING_CLOSURE_ADJUDICATION_CLOSEOUT.md",
+      "sha256": "e0ac492a3dbf2681b2c161b776f92e065fe6b78361602d763a45640da3cde153",
+      "bytes": 1642
+    },
+    {
+      "path": "docs/research/CROSS_MODEL_SEMANTIC_REPLICATION_CLOSEOUT.md",
+      "sha256": "3d703255a357b49a53f675997f9f7a63b1c91a49e08d9cbc66d687296df3c087",
+      "bytes": 3540
+    },
+    {
+      "path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "bytes": 1989
+    },
+    {
+      "path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CLOSEOUT.md",
+      "sha256": "967067f4e6906105dbd2478cf91aee1a23440b6d7759988ac67b10fa41ad8d55",
+      "bytes": 1997
+    },
+    {
+      "path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_EMPIRICAL_CLOSEOUT.md",
+      "sha256": "eb1164d94a6c159c4661996b05732694890dc58f4df7d2dc171bdb0b922b3b7c",
+      "bytes": 2551
+    },
+    {
+      "path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json",
+      "sha256": "9931e0bb2abd9a8c7f8bd8a9e8b87938b27bdd3cb2a692d7f5dca277abbef353",
+      "bytes": 2847
+    },
+    {
+      "path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V1_BLOCKER_CLOSEOUT.md",
+      "sha256": "6be4570c8bb9c11517c2fd7fcf0248f935037a8ab33c21ad7c1452a82c70a1fb",
+      "bytes": 4432
+    },
+    {
+      "path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V1_SATISFIABILITY_RECEIPT.json",
+      "sha256": "507a739c8813c6c8601c3415af8cbdab8705bbfcbb8b37e2faeee09901477d51",
+      "bytes": 1420
+    },
+    {
+      "path": "protocols/independent-acquisition-convergence-v1.json",
+      "sha256": "51dfdc866790cc45863a683778fae7050888219cb28be1b284a26dd7ef1077c1",
+      "bytes": 2386
+    },
+    {
+      "path": "tools/independent_acquisition_convergence_v1.py",
+      "sha256": "48fa3786fe2226dc2a7cb1776ba9614f7fec734752387b9790b29581eeff2c4a",
+      "bytes": 19136
+    },
+    {
+      "path": "docs/research/CLOSED_UNIVERSE_CLAIM_STRENGTH_STAGE_BC_FORENSIC_ANALYSIS.md",
+      "sha256": "bc9b0999916aba82c61027da2445488068bf55c05a386bd6bcc77e0f0a7d619c",
+      "bytes": 6233
+    },
+    {
+      "path": "docs/research/CLOSED_UNIVERSE_CLAIM_STRENGTH_STAGE_BC_FORENSIC_CLOSEOUT.md",
+      "sha256": "f97c1ee608d6499a30f58ad44f65121b7faaf4323637b194f593b3616a784218",
+      "bytes": 2148
+    },
+    {
+      "path": "docs/research/B1_PROGRAM_FINAL_SYNTHESIS.md",
+      "sha256": "3b622fe445bcd7ec20f1f889bb77b3f6183e167a149bd445f772a087c7a24446",
+      "bytes": 10214
+    },
+    {
+      "path": "docs/research/OPENEVIDENCE_ASSURANCE_CASE_STUDY.md",
+      "sha256": "95f1f2b2420328c7c5733431fc359e155675e732e043bb2bdf92172a51978660",
+      "bytes": 20356
+    },
+    {
+      "path": "docs/research/WHU_STATE_OF_FIELD_EVIDENCE_ADEQUACY_ADJACENT_WORK_MATRIX.md",
+      "sha256": "dcd1112b701d6622f959828266ed9f8140c06ba800ef95584832a29cc9412a02",
+      "bytes": 21761
+    },
+    {
+      "path": "docs/research/WHU_STATE_OF_FIELD_EVIDENCE_ADEQUACY_REVIEW.md",
+      "sha256": "6e4dc6a8877a1e57a19cf413c38d2cf57dec2b56ca40c70649f9209046699c97",
+      "bytes": 17818
+    },
+    {
+      "path": "docs/research/WARRANTED_TRUST_V1_DECISION.md",
+      "sha256": "33b42b9a955d72ff4e8adb43e72169b58eed7e5d80599d117025eecc8cffea08",
+      "bytes": 4166
+    },
+    {
+      "path": "docs/research/WHU_CONTINUE_STOP_DECISION.md",
+      "sha256": "a4929860a66aa0b312a5835bfd75332a7ca170394b3c2de83b0508ceac8d9920",
+      "bytes": 1045
+    },
+    {
+      "path": "docs/research/WHU_CONVENTIONAL_ENGINEERING_COUNTERFACTUAL.md",
+      "sha256": "419791678232da7fbc574d22588d7f9598506bad9e2687eb63566d9d0eb649f3",
+      "bytes": 1227
+    },
+    {
+      "path": "docs/research/WHU_HISTORICAL_TASK_REEXECUTION_CLOSEOUT.md",
+      "sha256": "f19536fe7d9ae4ad5be5ec65aee9c32a7ddfc4e144185288e3b1ebfc3e9933ad",
+      "bytes": 1292
+    },
+    {
+      "path": "docs/research/WHU_PROSPECTIVE_AGENT_BOUNDARY_CLOSURE_REVIEW.md",
+      "sha256": "9e970121aaec16b126272b2ee1ebcbb696c6bc9d8a5b297276b3ea04a91ac335",
+      "bytes": 1728
+    },
+    {
+      "path": "docs/research/WHU_WORKING_PAPER_CLAIM_LEDGER.md",
+      "sha256": "90a01788ff686ae51a48f8f650add8cc392f3802b34b770bb2514f26b5c8a363",
+      "bytes": 6130
+    },
+    {
+      "path": "docs/research/WHU_WORKING_PAPER_EVIDENCE_INVENTORY.md",
+      "sha256": "85cb21316bca832fa6d31e22475bc4e33051c2223605d57cf43e949a9d74b1e7",
+      "bytes": 8560
+    },
+    {
+      "path": "docs/research/closed-universe-evidence-acquisition-v1.4/results.json",
+      "sha256": "b5cb8646a5976332cdf2af1e886f4e576fa5d5b0b11b00e29e2875189dc9843d",
+      "bytes": 2450
+    },
+    {
+      "path": "docs/research/working-paper/README.md",
+      "sha256": "8d7d8cc7038ec273b16232de08f705933898d7c9ac503c4d312e3662375eeda8",
+      "bytes": 4292
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_ARTIFACT_MAP.md",
+      "sha256": "06053ee0311191cc9cc07f0ae90670e868f73379e1833be72d5863acf21ce759",
+      "bytes": 5236
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_AVAILABILITY_AND_DISCLOSURE.md",
+      "sha256": "5ea821936c751e3d6cf8b89fbab0911e6c2e8f844d34dc2721e799118e95c1bd",
+      "bytes": 3587
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_CITATION_AND_LICENSE_AUDIT.md",
+      "sha256": "27e91eddd36822573dbf9706d86b1c905c8c8b8eb6f82fe29468fffc10a0fca6",
+      "bytes": 2045
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_EXACT_NUMBER_MANIFEST.json",
+      "sha256": "d60739e9c2315a17aa50a39b3bdcf29cc4e603cec9fda7518df9f0e796528485",
+      "bytes": 37752
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_LIMITATIONS_REGISTER.md",
+      "sha256": "8b216e0a983329d484f17ad23f1c9dbe67feea46ea8d86d979566293fdcc8d8a",
+      "bytes": 2936
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_MANUSCRIPT.html",
+      "sha256": "88c02f3b408cd0599aec456a22fd03a5273cd987d79ab3efbbd106b9c67d9bbb",
+      "bytes": 37219
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_MANUSCRIPT.md",
+      "sha256": "10c8020256635311542c7ffda69cf44042a48ff795b64bc433a8ee4b25adfa42",
+      "bytes": 34232
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_OUTSIDE_RECONSTRUCTION_REVIEW.md",
+      "sha256": "e8bddff64be2ce7f39c72a815f303e3a7296c3f457876742ebaec81406631d8d",
+      "bytes": 2165
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_METHOD_HISTORY.md",
+      "sha256": "61ad21b80a4534a674640f4b7af8b320868026f92782f7a6170e5b4c50024f70",
+      "bytes": 937
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_TEST_CLASSIFICATION.md",
+      "sha256": "4757e412df4ef4a09d0a90364dfdd7d5d824db1af7fb94dfba444050746b24f7",
+      "bytes": 16279
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_CONTRACT_REDESIGN.md",
+      "sha256": "5b22e3b7c505507ccae031e954ff33b56e3a82e974ceb05776de5000dc3dd4bb",
+      "bytes": 1491
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_ONLY_RECONSTRUCTION_2026_09_27.md",
+      "sha256": "ccad83a47800618e49d17af6b5604eca8d69e2b720f34d44e39ae825473cde84",
+      "bytes": 1442
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_FRESH_INDEPENDENT_PUBLIC_REVIEW_2026_09_27.md",
+      "sha256": "77008da26b080265c676741caf8a241a5c7b76f16795e5520f4862447c5976cd",
+      "bytes": 1512
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_REVIEW_ADJUDICATION_2026_09_27.md",
+      "sha256": "016e9bd216677bd26d2efbfabf691c393c3ad1229faa8760aee34aeee58f8df4",
+      "bytes": 1132
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_PREPRINT_RELEASE_CHECKLIST.md",
+      "sha256": "c46b96312f095cd8d07a136700205749fcddf258679a204d71a51ddad9c2cacc",
+      "bytes": 3231
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_REPRODUCTION.md",
+      "sha256": "3066821c7fd50cd8a5268ff9198074a24ef4183f0ca4161cbf61cd36b80f02ba",
+      "bytes": 3126
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_REPRODUCIBILITY_AUDIT_DECISION.md",
+      "sha256": "6aa057b86cb4b15e4ee4d39e2dd9aff7a0e7ed03575b5c3314e6d8b6cf78170d",
+      "bytes": 2086
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_REPRODUCIBILITY_AUDIT_ADJUDICATION.md",
+      "sha256": "a075d5cf1138afe95abb3450064283567bab32a5161c2ad72b33a9ca894eac17",
+      "bytes": 748
+    },
+    {
+      "path": "docs/research/working-paper/WHU_WORKING_PAPER_SUPPLEMENTARY_TABLES.md",
+      "sha256": "1b1cd988a6738cc5145a6cbd9175cae9e863045f11b9ba0d1c4f9318734ebe9c",
+      "bytes": 14723
+    },
+    {
+      "path": "docs/research/working-paper/figures/figure-1-construct-map.svg",
+      "sha256": "ca7a582e3d3fcfc870f061257115c2d18ca8fb9faa7eb9b0b0c179ecd1a955d0",
+      "bytes": 2411
+    },
+    {
+      "path": "docs/research/working-paper/figures/figure-2-chronology.svg",
+      "sha256": "1b2d673d251f2b381e21783b504a868f308b76ed56924d43989874b2d3e67efb",
+      "bytes": 4116
+    },
+    {
+      "path": "docs/research/working-paper/figures/figure-3-semantic-panels.svg",
+      "sha256": "623c5ad313f95673f9a9cd689638766b824f1db51732e8ed625e57e25e5c58b2",
+      "bytes": 2611
+    },
+    {
+      "path": "docs/research/working-paper/figures/figure-4-acquisition-result.svg",
+      "sha256": "5b0f79fbd82ce18b6b33b5b9f418b8f5fd6c100114c51be7f7dbbdd6b79a2a87",
+      "bytes": 2363
+    },
+    {
+      "path": "docs/research/working-paper/figures/figure-5-assurance-panels.svg",
+      "sha256": "92be7636690b4cb3a8166195b75836fdd960a9ad3205893dc0c3c61ada28a3a6",
+      "bytes": 3667
+    },
+    {
+      "path": "docs/research/working-paper/figures/figure-6-measurement-failures.svg",
+      "sha256": "957c73baf128091a3f8cb487c2983f77b704223cf468f038e746d5524de16585",
+      "bytes": 2971
+    }
+  ],
+  "excluded_classes": [
+    "raw provider requests and responses pending redistribution review",
+    "unopened convergence V2 holdout contents",
+    "subscriber or publication-administration data",
+    "local receipts containing private paths, identities, or credentials",
+    "conversation history and local Codex/ChatGPT state"
+  ]
+}

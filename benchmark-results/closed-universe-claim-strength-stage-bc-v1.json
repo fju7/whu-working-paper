@@ -1,0 +1,664 @@
+{
+  "conditions": {
+    "B_NO_GAP_DISCLOSURE": {
+      "metrics": {
+        "case_count": 10,
+        "case_results": [
+          {
+            "actual_completed_universe_claim": "POSITIVE",
+            "apparent_complete_subset_claim": "STRONG_POSITIVE",
+            "case_id": "BC01",
+            "classification": "UNNECESSARY_WEAKENING",
+            "expected_safe_claim": "POSITIVE",
+            "model_claim": "UNRESOLVED",
+            "reason": "No completeness statement establishes that the acquired positive records are the complete universe."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "POSITIVE",
+            "case_id": "BC02",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The evidence does not guarantee that no unacquired records could alter the universe total."
+          },
+          {
+            "actual_completed_universe_claim": "STRONG_POSITIVE",
+            "apparent_complete_subset_claim": "STRONG_POSITIVE",
+            "case_id": "BC03",
+            "classification": "UNNECESSARY_WEAKENING",
+            "expected_safe_claim": "POSITIVE",
+            "model_claim": "UNRESOLVED",
+            "reason": "Absence of a gap disclosure does not prove the acquired records are complete."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "POSITIVE",
+            "case_id": "BC04",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The complete-universe total is not guaranteed without established universe completeness."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "NEGATIVE",
+            "case_id": "BC05",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The negative acquired scores do not establish that the complete universe contains no unacquired records."
+          },
+          {
+            "actual_completed_universe_claim": "NEGATIVE",
+            "apparent_complete_subset_claim": "STRONG_NEGATIVE",
+            "case_id": "BC06",
+            "classification": "UNNECESSARY_WEAKENING",
+            "expected_safe_claim": "NEGATIVE",
+            "model_claim": "UNRESOLVED",
+            "reason": "No completeness statement guarantees the observed negative total for the complete universe."
+          },
+          {
+            "actual_completed_universe_claim": "STRONG_NEGATIVE",
+            "apparent_complete_subset_claim": "STRONG_NEGATIVE",
+            "case_id": "BC07",
+            "classification": "UNNECESSARY_WEAKENING",
+            "expected_safe_claim": "NEGATIVE",
+            "model_claim": "UNRESOLVED",
+            "reason": "The supplied negative records are not established as the complete evidence universe."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "NEGATIVE",
+            "case_id": "BC08",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "Potential unacquired records prevent a guaranteed complete-universe negative total."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "POSITIVE",
+            "case_id": "BC09",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The acquired records do not establish completeness, so the complete-universe total is not guaranteed positive."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "NEGATIVE",
+            "case_id": "BC10",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The acquired records do not establish completeness, so the complete-universe total is not guaranteed negative."
+          }
+        ],
+        "claim_overshoot_rate": 0.0,
+        "counts": {
+          "CLAIM_OVERSHOOT": 0,
+          "EXACT": 6,
+          "UNNECESSARY_WEAKENING": 4
+        },
+        "exact_match_rate": 0.6,
+        "unnecessary_weakening_rate": 0.4,
+        "valid_response": true
+      },
+      "model_packet": {
+        "cases": [
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "case_id": "BC01"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1
+            ],
+            "case_id": "BC02"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "case_id": "BC03"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1
+            ],
+            "case_id": "BC04"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1
+            ],
+            "case_id": "BC05"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "case_id": "BC06"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "case_id": "BC07"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1
+            ],
+            "case_id": "BC08"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "case_id": "BC09"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "case_id": "BC10"
+          }
+        ],
+        "claim_options": {
+          "NEGATIVE": "Every possible completion of the evidence universe has a total score of at most -1, but STRONG_NEGATIVE is not guaranteed.",
+          "POSITIVE": "Every possible completion of the evidence universe has a total score of at least 1, but STRONG_POSITIVE is not guaranteed.",
+          "STRONG_NEGATIVE": "Every record in the complete evidence universe has a combined total score of at most -4.",
+          "STRONG_POSITIVE": "Every record in the complete evidence universe has a combined total score of at least 4.",
+          "UNRESOLVED": "The available evidence state does not guarantee a positive or negative complete-universe total."
+        },
+        "condition": "B_NO_GAP_DISCLOSURE",
+        "record_rule": "Every universe record has an integer score in {-1, 0, 1}. Acquired records reveal their scores. Missing records, when disclosed, may independently have any allowed score.",
+        "selection_rule": "Choose the strongest complete-universe claim warranted by the supplied evidence state. Do not assume that an undisclosed acquisition gap exists, but do not treat absence of a completeness statement as proof that the supplied records are complete."
+      },
+      "model_response": {
+        "decisions": [
+          {
+            "case_id": "BC01",
+            "claim": "UNRESOLVED",
+            "reason": "No completeness statement establishes that the acquired positive records are the complete universe."
+          },
+          {
+            "case_id": "BC02",
+            "claim": "UNRESOLVED",
+            "reason": "The evidence does not guarantee that no unacquired records could alter the universe total."
+          },
+          {
+            "case_id": "BC03",
+            "claim": "UNRESOLVED",
+            "reason": "Absence of a gap disclosure does not prove the acquired records are complete."
+          },
+          {
+            "case_id": "BC04",
+            "claim": "UNRESOLVED",
+            "reason": "The complete-universe total is not guaranteed without established universe completeness."
+          },
+          {
+            "case_id": "BC05",
+            "claim": "UNRESOLVED",
+            "reason": "The negative acquired scores do not establish that the complete universe contains no unacquired records."
+          },
+          {
+            "case_id": "BC06",
+            "claim": "UNRESOLVED",
+            "reason": "No completeness statement guarantees the observed negative total for the complete universe."
+          },
+          {
+            "case_id": "BC07",
+            "claim": "UNRESOLVED",
+            "reason": "The supplied negative records are not established as the complete evidence universe."
+          },
+          {
+            "case_id": "BC08",
+            "claim": "UNRESOLVED",
+            "reason": "Potential unacquired records prevent a guaranteed complete-universe negative total."
+          },
+          {
+            "case_id": "BC09",
+            "claim": "UNRESOLVED",
+            "reason": "The acquired records do not establish completeness, so the complete-universe total is not guaranteed positive."
+          },
+          {
+            "case_id": "BC10",
+            "claim": "UNRESOLVED",
+            "reason": "The acquired records do not establish completeness, so the complete-universe total is not guaranteed negative."
+          }
+        ]
+      },
+      "provider_response_id": "resp_03343a67447726ed016ab675242ee487d29897876ecc51fa64",
+      "usage": {
+        "input_tokens": 616,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2161,
+        "output_tokens_details": {
+          "reasoning_tokens": 1828
+        },
+        "total_tokens": 2777
+      }
+    },
+    "C_TRUTHFUL_GAP_DISCLOSURE": {
+      "metrics": {
+        "case_count": 10,
+        "case_results": [
+          {
+            "actual_completed_universe_claim": "POSITIVE",
+            "apparent_complete_subset_claim": "STRONG_POSITIVE",
+            "case_id": "BC01",
+            "classification": "EXACT",
+            "expected_safe_claim": "POSITIVE",
+            "model_claim": "POSITIVE",
+            "reason": "The complete-universe total is at least 2, but not necessarily at least 4."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "POSITIVE",
+            "case_id": "BC02",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total can range from 0 to 6, so neither sign is guaranteed."
+          },
+          {
+            "actual_completed_universe_claim": "STRONG_POSITIVE",
+            "apparent_complete_subset_claim": "STRONG_POSITIVE",
+            "case_id": "BC03",
+            "classification": "EXACT",
+            "expected_safe_claim": "POSITIVE",
+            "model_claim": "POSITIVE",
+            "reason": "The complete-universe total is at least 3, but not necessarily at least 4."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "POSITIVE",
+            "case_id": "BC04",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total can range from 0 to 4, so neither sign is guaranteed."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "NEGATIVE",
+            "case_id": "BC05",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total can range from -6 to 0, so neither sign is guaranteed."
+          },
+          {
+            "actual_completed_universe_claim": "NEGATIVE",
+            "apparent_complete_subset_claim": "STRONG_NEGATIVE",
+            "case_id": "BC06",
+            "classification": "EXACT",
+            "expected_safe_claim": "NEGATIVE",
+            "model_claim": "NEGATIVE",
+            "reason": "The complete-universe total is at most -2, but not necessarily at most -4."
+          },
+          {
+            "actual_completed_universe_claim": "STRONG_NEGATIVE",
+            "apparent_complete_subset_claim": "STRONG_NEGATIVE",
+            "case_id": "BC07",
+            "classification": "EXACT",
+            "expected_safe_claim": "NEGATIVE",
+            "model_claim": "NEGATIVE",
+            "reason": "The complete-universe total is at most -3, but not necessarily at most -4."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "NEGATIVE",
+            "case_id": "BC08",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total can range from -4 to 0, so neither sign is guaranteed."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "POSITIVE",
+            "case_id": "BC09",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total can range from 0 to 6, so neither sign is guaranteed."
+          },
+          {
+            "actual_completed_universe_claim": "UNRESOLVED",
+            "apparent_complete_subset_claim": "NEGATIVE",
+            "case_id": "BC10",
+            "classification": "EXACT",
+            "expected_safe_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total can range from -6 to 0, so neither sign is guaranteed."
+          }
+        ],
+        "claim_overshoot_rate": 0.0,
+        "counts": {
+          "CLAIM_OVERSHOOT": 0,
+          "EXACT": 10,
+          "UNNECESSARY_WEAKENING": 0
+        },
+        "exact_match_rate": 1.0,
+        "unnecessary_weakening_rate": 0.0,
+        "valid_response": true
+      },
+      "model_packet": {
+        "cases": [
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 4,
+              "complete_universe_size": 6,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 2
+            },
+            "case_id": "BC01"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 3,
+              "complete_universe_size": 6,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 3
+            },
+            "case_id": "BC02"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 5,
+              "complete_universe_size": 7,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 2
+            },
+            "case_id": "BC03"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 2,
+              "complete_universe_size": 4,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 2
+            },
+            "case_id": "BC04"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 3,
+              "complete_universe_size": 6,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 3
+            },
+            "case_id": "BC05"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 4,
+              "complete_universe_size": 6,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 2
+            },
+            "case_id": "BC06"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 5,
+              "complete_universe_size": 7,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 2
+            },
+            "case_id": "BC07"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1
+            ],
+            "acquisition_gap": {
+              "acquired_count": 2,
+              "complete_universe_size": 4,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 2
+            },
+            "case_id": "BC08"
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "acquisition_gap": {
+              "acquired_count": 4,
+              "complete_universe_size": 7,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 3
+            },
+            "case_id": "BC09"
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "acquisition_gap": {
+              "acquired_count": 4,
+              "complete_universe_size": 7,
+              "each_missing_score_is_in": [
+                -1,
+                0,
+                1
+              ],
+              "missing_count": 3
+            },
+            "case_id": "BC10"
+          }
+        ],
+        "claim_options": {
+          "NEGATIVE": "Every possible completion of the evidence universe has a total score of at most -1, but STRONG_NEGATIVE is not guaranteed.",
+          "POSITIVE": "Every possible completion of the evidence universe has a total score of at least 1, but STRONG_POSITIVE is not guaranteed.",
+          "STRONG_NEGATIVE": "Every record in the complete evidence universe has a combined total score of at most -4.",
+          "STRONG_POSITIVE": "Every record in the complete evidence universe has a combined total score of at least 4.",
+          "UNRESOLVED": "The available evidence state does not guarantee a positive or negative complete-universe total."
+        },
+        "condition": "C_TRUTHFUL_GAP_DISCLOSURE",
+        "record_rule": "Every universe record has an integer score in {-1, 0, 1}. Acquired records reveal their scores. Missing records, when disclosed, may independently have any allowed score.",
+        "selection_rule": "Choose the strongest complete-universe claim warranted by the supplied evidence state. Do not assume that an undisclosed acquisition gap exists, but do not treat absence of a completeness statement as proof that the supplied records are complete."
+      },
+      "model_response": {
+        "decisions": [
+          {
+            "case_id": "BC01",
+            "claim": "POSITIVE",
+            "reason": "The complete-universe total is at least 2, but not necessarily at least 4."
+          },
+          {
+            "case_id": "BC02",
+            "claim": "UNRESOLVED",
+            "reason": "The total can range from 0 to 6, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "BC03",
+            "claim": "POSITIVE",
+            "reason": "The complete-universe total is at least 3, but not necessarily at least 4."
+          },
+          {
+            "case_id": "BC04",
+            "claim": "UNRESOLVED",
+            "reason": "The total can range from 0 to 4, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "BC05",
+            "claim": "UNRESOLVED",
+            "reason": "The total can range from -6 to 0, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "BC06",
+            "claim": "NEGATIVE",
+            "reason": "The complete-universe total is at most -2, but not necessarily at most -4."
+          },
+          {
+            "case_id": "BC07",
+            "claim": "NEGATIVE",
+            "reason": "The complete-universe total is at most -3, but not necessarily at most -4."
+          },
+          {
+            "case_id": "BC08",
+            "claim": "UNRESOLVED",
+            "reason": "The total can range from -4 to 0, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "BC09",
+            "claim": "UNRESOLVED",
+            "reason": "The total can range from 0 to 6, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "BC10",
+            "claim": "UNRESOLVED",
+            "reason": "The total can range from -6 to 0, so neither sign is guaranteed."
+          }
+        ]
+      },
+      "provider_response_id": "resp_0ba63ccb61a828bd016ab6754009b487d2897f6b6699e2b6bc",
+      "usage": {
+        "input_tokens": 1068,
+        "input_tokens_details": {
+          "cache_write_tokens": 1065,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1021,
+        "output_tokens_details": {
+          "reasoning_tokens": 673
+        },
+        "total_tokens": 2089
+      }
+    }
+  },
+  "conservative_accounted_cost_usd": 0.035188,
+  "executed_at": "2026-09-25T13:20:35.060459+00:00",
+  "experiment_id": "CLOSED_UNIVERSE_CLAIM_STRENGTH_CALIBRATION_STAGE_BC_V1",
+  "external_search_or_acquisition_calls": 0,
+  "interpretation_boundary": "This tests the effect of explicit truthful gap disclosure in one matched deterministic synthetic task family. It does not test acquisition, search, open-world completeness, factual evidence quality, or general research reliability.",
+  "model": "gpt-5.6-luna",
+  "paired_metrics": {
+    "paired_appropriate_weakening_count": 0,
+    "paired_overshoot_reduction_with_gap_disclosure": 0,
+    "stage_bc_gate_passed": false
+  },
+  "protocol_sha256": "95c8c1c1f93454332feccdedd688e9eb3fd92c1a013214c87d2dd6cf41ede83c",
+  "provider_calls": 2,
+  "status": "COMPLETE"
+}

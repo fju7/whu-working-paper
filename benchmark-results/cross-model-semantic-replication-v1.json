@@ -1,0 +1,1199 @@
+{
+  "conservative_accounted_cost_usd": 0.18588,
+  "executed_at": "2026-09-25T14:32:38.350146+00:00",
+  "experiment_id": "CROSS_MODEL_SEMANTIC_REPLICATION_V1",
+  "external_search_or_acquisition_calls": 0,
+  "model_summaries": {
+    "gpt-6-astra": {
+      "calibration_case_count": 15,
+      "claim_overshoot_count": 0,
+      "consequentiality_sensitivity": true,
+      "correct_weakening_level_count": 10,
+      "exact_calibration_count": 15,
+      "false_falsifier_count": 0,
+      "false_falsifier_rate": 0.0,
+      "falsifier_exact_case_count": 9,
+      "genuine_falsifier_count": 10,
+      "genuine_falsifier_identification_count": 10,
+      "missed_consequential_falsifier_count": 0,
+      "unnecessary_weakening_count": 0
+    }
+  },
+  "protocol_sha256": "b7e073adf803ef00dc7b4f595db0a833b24598aa141e157690f0fbeb27c5bdcf",
+  "runs": [
+    {
+      "conservative_accounted_cost_usd": 0.05028,
+      "family": "claim_calibration_complete_evidence",
+      "metrics": {
+        "case_count": 10,
+        "case_results": [
+          {
+            "actual_claim": "STRONG_POSITIVE",
+            "case_id": "A01",
+            "classification": "EXACT",
+            "expected_claim": "STRONG_POSITIVE",
+            "reason": "The total is exactly 5, which is at least 4."
+          },
+          {
+            "actual_claim": "STRONG_POSITIVE",
+            "case_id": "A02",
+            "classification": "EXACT",
+            "expected_claim": "STRONG_POSITIVE",
+            "reason": "The total is exactly 4."
+          },
+          {
+            "actual_claim": "POSITIVE",
+            "case_id": "A03",
+            "classification": "EXACT",
+            "expected_claim": "POSITIVE",
+            "reason": "Possible totals range from 1 to 3; positivity is guaranteed, but a total of at least 4 is not."
+          },
+          {
+            "actual_claim": "POSITIVE",
+            "case_id": "A04",
+            "classification": "EXACT",
+            "expected_claim": "POSITIVE",
+            "reason": "Possible totals range from 1 to 5; positivity is guaranteed, but a total of at least 4 is not."
+          },
+          {
+            "actual_claim": "UNRESOLVED",
+            "case_id": "A05",
+            "classification": "EXACT",
+            "expected_claim": "UNRESOLVED",
+            "reason": "Possible totals range from -1 to 1, so neither sign is guaranteed."
+          },
+          {
+            "actual_claim": "UNRESOLVED",
+            "case_id": "A06",
+            "classification": "EXACT",
+            "expected_claim": "UNRESOLVED",
+            "reason": "Possible totals range from 0 to 4; zero is possible, so neither sign is guaranteed."
+          },
+          {
+            "actual_claim": "STRONG_NEGATIVE",
+            "case_id": "A07",
+            "classification": "EXACT",
+            "expected_claim": "STRONG_NEGATIVE",
+            "reason": "The total is exactly -5, which is at most -4."
+          },
+          {
+            "actual_claim": "NEGATIVE",
+            "case_id": "A08",
+            "classification": "EXACT",
+            "expected_claim": "NEGATIVE",
+            "reason": "Possible totals range from -3 to -1; negativity is guaranteed, but a total of at most -4 is not."
+          },
+          {
+            "actual_claim": "NEGATIVE",
+            "case_id": "A09",
+            "classification": "EXACT",
+            "expected_claim": "NEGATIVE",
+            "reason": "Possible totals range from -5 to -1; negativity is guaranteed, but a total of at most -4 is not."
+          },
+          {
+            "actual_claim": "UNRESOLVED",
+            "case_id": "A10",
+            "classification": "EXACT",
+            "expected_claim": "UNRESOLVED",
+            "reason": "Possible totals range from -4 to 0; zero is possible, so neither sign is guaranteed."
+          }
+        ],
+        "claim_overshoot_rate": 0.0,
+        "counts": {
+          "CLAIM_OVERSHOOT": 0,
+          "EXACT": 10,
+          "UNNECESSARY_WEAKENING": 0
+        },
+        "exact_match_rate": 1.0,
+        "stage_a_gate_passed": true,
+        "unnecessary_weakening_rate": 0.0,
+        "valid_response": true
+      },
+      "model": "gpt-6-astra",
+      "model_packet": {
+        "cases": [
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "case_id": "A01",
+            "unacquired_count": 0,
+            "universe_size": 5
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "case_id": "A02",
+            "unacquired_count": 0,
+            "universe_size": 5
+          },
+          {
+            "acquired_scores": [
+              1,
+              1
+            ],
+            "case_id": "A03",
+            "unacquired_count": 1,
+            "universe_size": 3
+          },
+          {
+            "acquired_scores": [
+              1,
+              1,
+              1
+            ],
+            "case_id": "A04",
+            "unacquired_count": 2,
+            "universe_size": 5
+          },
+          {
+            "acquired_scores": [
+              1,
+              -1
+            ],
+            "case_id": "A05",
+            "unacquired_count": 1,
+            "universe_size": 3
+          },
+          {
+            "acquired_scores": [
+              1,
+              1
+            ],
+            "case_id": "A06",
+            "unacquired_count": 2,
+            "universe_size": 4
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "case_id": "A07",
+            "unacquired_count": 0,
+            "universe_size": 5
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1
+            ],
+            "case_id": "A08",
+            "unacquired_count": 1,
+            "universe_size": 3
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1,
+              -1
+            ],
+            "case_id": "A09",
+            "unacquired_count": 2,
+            "universe_size": 5
+          },
+          {
+            "acquired_scores": [
+              -1,
+              -1
+            ],
+            "case_id": "A10",
+            "unacquired_count": 2,
+            "universe_size": 4
+          }
+        ],
+        "claim_options": {
+          "NEGATIVE": "Every possible completion has a total score of at most -1, but STRONG_NEGATIVE is not guaranteed.",
+          "POSITIVE": "Every possible completion has a total score of at least 1, but STRONG_POSITIVE is not guaranteed.",
+          "STRONG_NEGATIVE": "Every possible completion has a total score of at most -4.",
+          "STRONG_POSITIVE": "Every possible completion has a total score of at least 4.",
+          "UNRESOLVED": "The supplied evidence state does not guarantee a positive or negative total."
+        },
+        "record_rule": "Each universe record has an integer score in {-1, 0, 1}. Acquired records reveal their scores. Each unacquired record may have any allowed score independently.",
+        "selection_rule": "Choose the strongest claim logically guaranteed across every possible completion of the unacquired records."
+      },
+      "model_response": {
+        "decisions": [
+          {
+            "case_id": "A01",
+            "claim": "STRONG_POSITIVE",
+            "reason": "The total is exactly 5, which is at least 4."
+          },
+          {
+            "case_id": "A02",
+            "claim": "STRONG_POSITIVE",
+            "reason": "The total is exactly 4."
+          },
+          {
+            "case_id": "A03",
+            "claim": "POSITIVE",
+            "reason": "Possible totals range from 1 to 3; positivity is guaranteed, but a total of at least 4 is not."
+          },
+          {
+            "case_id": "A04",
+            "claim": "POSITIVE",
+            "reason": "Possible totals range from 1 to 5; positivity is guaranteed, but a total of at least 4 is not."
+          },
+          {
+            "case_id": "A05",
+            "claim": "UNRESOLVED",
+            "reason": "Possible totals range from -1 to 1, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "A06",
+            "claim": "UNRESOLVED",
+            "reason": "Possible totals range from 0 to 4; zero is possible, so neither sign is guaranteed."
+          },
+          {
+            "case_id": "A07",
+            "claim": "STRONG_NEGATIVE",
+            "reason": "The total is exactly -5, which is at most -4."
+          },
+          {
+            "case_id": "A08",
+            "claim": "NEGATIVE",
+            "reason": "Possible totals range from -3 to -1; negativity is guaranteed, but a total of at most -4 is not."
+          },
+          {
+            "case_id": "A09",
+            "claim": "NEGATIVE",
+            "reason": "Possible totals range from -5 to -1; negativity is guaranteed, but a total of at most -4 is not."
+          },
+          {
+            "case_id": "A10",
+            "claim": "UNRESOLVED",
+            "reason": "Possible totals range from -4 to 0; zero is possible, so neither sign is guaranteed."
+          }
+        ]
+      },
+      "provider": "openai",
+      "provider_response_id": "resp_0614b6c88b09c293016ab686076f5487d1b55f258c5c15e6af",
+      "reasoning_effort": "medium",
+      "usage": {
+        "input_tokens": 719,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 359,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1078
+      }
+    },
+    {
+      "conservative_accounted_cost_usd": 0.03582,
+      "family": "known_gap_consequentiality",
+      "metrics": {
+        "case_count": 5,
+        "case_results": [
+          {
+            "case_id": "KG01_ZERO_UNRESOLVED",
+            "classification": "EXACT",
+            "completion_interval": [
+              4,
+              4
+            ],
+            "consequentiality": "NO_UNRESOLVED_EVIDENCE",
+            "maximum_supportable_claim": "STRONG_POSITIVE",
+            "model_claim": "STRONG_POSITIVE",
+            "reason": "The complete-universe total is exactly 4."
+          },
+          {
+            "case_id": "KG02_ONE_CANNOT_OVERTURN",
+            "classification": "EXACT",
+            "completion_interval": [
+              2,
+              4
+            ],
+            "consequentiality": "CANNOT_CHANGE_DIRECTION",
+            "maximum_supportable_claim": "POSITIVE",
+            "model_claim": "POSITIVE",
+            "reason": "The total ranges from 2 to 4, guaranteeing positivity but not a total of at least 4."
+          },
+          {
+            "case_id": "KG03_ONE_CAN_OVERTURN",
+            "classification": "EXACT",
+            "completion_interval": [
+              0,
+              2
+            ],
+            "consequentiality": "CAN_REMOVE_OR_CHANGE_DIRECTION",
+            "maximum_supportable_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "The total ranges from 0 to 2; an allowed completion yields zero."
+          },
+          {
+            "case_id": "KG04_MULTIPLE_BOUNDED_CANNOT_OVERTURN",
+            "classification": "EXACT",
+            "completion_interval": [
+              2,
+              8
+            ],
+            "consequentiality": "CANNOT_CHANGE_DIRECTION",
+            "maximum_supportable_claim": "POSITIVE",
+            "model_claim": "POSITIVE",
+            "reason": "The total ranges from 2 to 8, guaranteeing positivity but not a total of at least 4."
+          },
+          {
+            "case_id": "KG05_UNBOUNDED_UNRESOLVED",
+            "classification": "EXACT",
+            "completion_interval": [
+              null,
+              null
+            ],
+            "consequentiality": "CAN_REMOVE_OR_CHANGE_DIRECTION",
+            "maximum_supportable_claim": "UNRESOLVED",
+            "model_claim": "UNRESOLVED",
+            "reason": "Unbounded unresolved records establish no finite lower or upper total; neither direction is guaranteed."
+          }
+        ],
+        "claim_overshoot_count": 0,
+        "consequentiality_sensitivity": true,
+        "exact_calibration_count": 5,
+        "primary_gate_passed": true,
+        "unnecessary_weakening_count": 0,
+        "valid_response": true
+      },
+      "model": "gpt-6-astra",
+      "model_packet": {
+        "cases": [
+          {
+            "case_id": "KG01_ZERO_UNRESOLVED",
+            "observed_scores": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "unresolved_evidence": {
+              "count": 0,
+              "count_bound": "EXACT_FINITE",
+              "each_score_is_in": [
+                -1,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "case_id": "KG02_ONE_CANNOT_OVERTURN",
+            "observed_scores": [
+              1,
+              1,
+              1
+            ],
+            "unresolved_evidence": {
+              "count": 1,
+              "count_bound": "EXACT_FINITE",
+              "each_score_is_in": [
+                -1,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "case_id": "KG03_ONE_CAN_OVERTURN",
+            "observed_scores": [
+              1
+            ],
+            "unresolved_evidence": {
+              "count": 1,
+              "count_bound": "EXACT_FINITE",
+              "each_score_is_in": [
+                -1,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "case_id": "KG04_MULTIPLE_BOUNDED_CANNOT_OVERTURN",
+            "observed_scores": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "unresolved_evidence": {
+              "count": 3,
+              "count_bound": "EXACT_FINITE",
+              "each_score_is_in": [
+                -1,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "case_id": "KG05_UNBOUNDED_UNRESOLVED",
+            "observed_scores": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "unresolved_evidence": {
+              "count": null,
+              "count_bound": "UNBOUNDED",
+              "each_score_is_in": [
+                -1,
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "claim_options": {
+          "NEGATIVE": "The complete-universe total is guaranteed to be at most -1, but at most -4 is not guaranteed.",
+          "POSITIVE": "The complete-universe total is guaranteed to be at least 1, but at least 4 is not guaranteed.",
+          "STRONG_NEGATIVE": "The complete-universe total is guaranteed to be at most -4.",
+          "STRONG_POSITIVE": "The complete-universe total is guaranteed to be at least 4.",
+          "UNRESOLVED": "The allowed completions do not guarantee either a positive or a negative complete-universe total."
+        },
+        "record_rule": "Every observed or unresolved record has an integer score in {-1, 0, 1}. Observed records reveal their scores. A finite unresolved count means each unresolved score may independently take any allowed value. An unbounded unresolved count means no finite lower or upper completion total is established.",
+        "selection_rule": "Choose the strongest claim guaranteed across every completion allowed by the stated unresolved-evidence bound. Weaken a directional claim only when an allowed completion can make the complete-universe total non-directional or reverse it."
+      },
+      "model_response": {
+        "decisions": [
+          {
+            "case_id": "KG01_ZERO_UNRESOLVED",
+            "claim": "STRONG_POSITIVE",
+            "reason": "The complete-universe total is exactly 4."
+          },
+          {
+            "case_id": "KG02_ONE_CANNOT_OVERTURN",
+            "claim": "POSITIVE",
+            "reason": "The total ranges from 2 to 4, guaranteeing positivity but not a total of at least 4."
+          },
+          {
+            "case_id": "KG03_ONE_CAN_OVERTURN",
+            "claim": "UNRESOLVED",
+            "reason": "The total ranges from 0 to 2; an allowed completion yields zero."
+          },
+          {
+            "case_id": "KG04_MULTIPLE_BOUNDED_CANNOT_OVERTURN",
+            "claim": "POSITIVE",
+            "reason": "The total ranges from 2 to 8, guaranteeing positivity but not a total of at least 4."
+          },
+          {
+            "case_id": "KG05_UNBOUNDED_UNRESOLVED",
+            "claim": "UNRESOLVED",
+            "reason": "Unbounded unresolved records establish no finite lower or upper total; neither direction is guaranteed."
+          }
+        ]
+      },
+      "provider": "openai",
+      "provider_response_id": "resp_03643fa00b8f49d8016ab6860f188c87d18dd465892022488f",
+      "reasoning_effort": "medium",
+      "usage": {
+        "input_tokens": 716,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 215,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 931
+      }
+    },
+    {
+      "conservative_accounted_cost_usd": 0.09978,
+      "family": "falsifier_identification",
+      "metrics": {
+        "case_count": 9,
+        "case_results": [
+          {
+            "case_id": "FI01_STRONG_POSITIVE_EDGE",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "POSITIVE"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "POSITIVE"
+              }
+            ],
+            "reason": "A lowers the total from 4 to 3 and is the only weakening package.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI02_STRONG_POSITIVE_BUFFERED",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "POSITIVE"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "POSITIVE"
+              }
+            ],
+            "reason": "B lowers the total from 5 to 3 and is the only weakening package.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI03_STRONG_POSITIVE_MULTIPLE_MINIMA",
+            "correct_weakening_level_count": 2,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "POSITIVE"
+              },
+              {
+                "candidate_id": "B",
+                "resulting_claim": "POSITIVE"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "POSITIVE"
+              },
+              {
+                "candidate_id": "B",
+                "resulting_claim": "POSITIVE"
+              }
+            ],
+            "reason": "A and B each lower the total from 4 to 3 with one record; both are minimum weakening packages.",
+            "true_positive_count": 2
+          },
+          {
+            "case_id": "FI04_POSITIVE_EDGE",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "reason": "A lowers the total from 1 to 0 and is the only weakening package.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI05_POSITIVE_BUFFERED",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "reason": "B lowers the total from 2 to 0; all other packages leave the claim POSITIVE.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI06_STRONG_NEGATIVE_EDGE",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "NEGATIVE"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "NEGATIVE"
+              }
+            ],
+            "reason": "A raises the total from -4 to -3 and is the only weakening package.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI07_STRONG_NEGATIVE_BUFFERED",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "NEGATIVE"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "NEGATIVE"
+              }
+            ],
+            "reason": "B raises the total from -5 to -3 and is the only weakening package.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI08_NEGATIVE_EDGE",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "reason": "A raises the total from -1 to 0 and is the only weakening package.",
+            "true_positive_count": 1
+          },
+          {
+            "case_id": "FI09_NEGATIVE_BUFFERED",
+            "correct_weakening_level_count": 1,
+            "exact": true,
+            "expected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "false_positive_count": 0,
+            "missed_count": 0,
+            "model_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ],
+            "reason": "B raises the total from -2 to 0; all other packages leave the claim NEGATIVE.",
+            "true_positive_count": 1
+          }
+        ],
+        "correct_weakening_level_count": 10,
+        "exact_case_count": 9,
+        "false_falsifier_count": 0,
+        "false_falsifier_rate": 0.0,
+        "genuine_falsifier_count": 10,
+        "missed_consequential_falsifier_count": 0,
+        "primary_gate_passed": true,
+        "true_falsifier_identification_count": 10,
+        "valid_response": true
+      },
+      "model": "gpt-6-astra",
+      "model_packet": {
+        "cases": [
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  0
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  1
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  -1,
+                  1
+                ]
+              }
+            ],
+            "case_id": "FI01_STRONG_POSITIVE_EDGE",
+            "current_claim": "STRONG_POSITIVE",
+            "observed_scores": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  -1,
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  -1,
+                  0
+                ]
+              }
+            ],
+            "case_id": "FI02_STRONG_POSITIVE_BUFFERED",
+            "current_claim": "STRONG_POSITIVE",
+            "observed_scores": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  0,
+                  -1,
+                  1
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  1,
+                  -1
+                ]
+              }
+            ],
+            "case_id": "FI03_STRONG_POSITIVE_MULTIPLE_MINIMA",
+            "current_claim": "STRONG_POSITIVE",
+            "observed_scores": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  0
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  1
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  -1,
+                  1
+                ]
+              }
+            ],
+            "case_id": "FI04_POSITIVE_EDGE",
+            "current_claim": "POSITIVE",
+            "observed_scores": [
+              1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  -1,
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  -1,
+                  0
+                ]
+              }
+            ],
+            "case_id": "FI05_POSITIVE_BUFFERED",
+            "current_claim": "POSITIVE",
+            "observed_scores": [
+              1,
+              1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  0
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  1,
+                  -1
+                ]
+              }
+            ],
+            "case_id": "FI06_STRONG_NEGATIVE_EDGE",
+            "current_claim": "STRONG_NEGATIVE",
+            "observed_scores": [
+              -1,
+              -1,
+              -1,
+              -1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  1,
+                  0
+                ]
+              }
+            ],
+            "case_id": "FI07_STRONG_NEGATIVE_BUFFERED",
+            "current_claim": "STRONG_NEGATIVE",
+            "observed_scores": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  0
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  -1
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  1,
+                  -1
+                ]
+              }
+            ],
+            "case_id": "FI08_NEGATIVE_EDGE",
+            "current_claim": "NEGATIVE",
+            "observed_scores": [
+              -1
+            ]
+          },
+          {
+            "candidate_packages": [
+              {
+                "candidate_id": "A",
+                "scores": [
+                  1
+                ]
+              },
+              {
+                "candidate_id": "B",
+                "scores": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "candidate_id": "C",
+                "scores": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "candidate_id": "D",
+                "scores": [
+                  1,
+                  0
+                ]
+              }
+            ],
+            "case_id": "FI09_NEGATIVE_BUFFERED",
+            "current_claim": "NEGATIVE",
+            "observed_scores": [
+              -1,
+              -1
+            ]
+          }
+        ],
+        "claim_options": {
+          "NEGATIVE": "The evidence total is at most -1 but greater than -4.",
+          "POSITIVE": "The evidence total is at least 1 but less than 4.",
+          "STRONG_NEGATIVE": "The evidence total is at most -4.",
+          "STRONG_POSITIVE": "The evidence total is at least 4.",
+          "UNRESOLVED": "The evidence total is 0."
+        },
+        "record_rule": "Every evidence record has an integer score in {-1, 0, 1}. The complete-evidence total is the sum of all scores.",
+        "selection_rule": "For each case, evaluate each offered candidate package separately. A package weakens the current claim when adding all records in that package yields a claim closer to UNRESOLVED than the current claim. Genuine falsifiers are all and only the weakening packages having the smallest record count among weakening packages offered in that case. Candidate packages are indivisible and may not be combined. Return every genuine falsifier and its resulting claim; return an empty selection only if none exists."
+      },
+      "model_response": {
+        "cases": [
+          {
+            "case_id": "FI01_STRONG_POSITIVE_EDGE",
+            "reason": "A lowers the total from 4 to 3 and is the only weakening package.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "case_id": "FI02_STRONG_POSITIVE_BUFFERED",
+            "reason": "B lowers the total from 5 to 3 and is the only weakening package.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "case_id": "FI03_STRONG_POSITIVE_MULTIPLE_MINIMA",
+            "reason": "A and B each lower the total from 4 to 3 with one record; both are minimum weakening packages.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "POSITIVE"
+              },
+              {
+                "candidate_id": "B",
+                "resulting_claim": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "case_id": "FI04_POSITIVE_EDGE",
+            "reason": "A lowers the total from 1 to 0 and is the only weakening package.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ]
+          },
+          {
+            "case_id": "FI05_POSITIVE_BUFFERED",
+            "reason": "B lowers the total from 2 to 0; all other packages leave the claim POSITIVE.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ]
+          },
+          {
+            "case_id": "FI06_STRONG_NEGATIVE_EDGE",
+            "reason": "A raises the total from -4 to -3 and is the only weakening package.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "case_id": "FI07_STRONG_NEGATIVE_BUFFERED",
+            "reason": "B raises the total from -5 to -3 and is the only weakening package.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "case_id": "FI08_NEGATIVE_EDGE",
+            "reason": "A raises the total from -1 to 0 and is the only weakening package.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "A",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ]
+          },
+          {
+            "case_id": "FI09_NEGATIVE_BUFFERED",
+            "reason": "B raises the total from -2 to 0; all other packages leave the claim NEGATIVE.",
+            "selected_falsifiers": [
+              {
+                "candidate_id": "B",
+                "resulting_claim": "UNRESOLVED"
+              }
+            ]
+          }
+        ]
+      },
+      "provider": "openai",
+      "provider_response_id": "resp_0d5b14c85da34104016ab686152ad087d19250fe5201bfd23d",
+      "reasoning_effort": "medium",
+      "usage": {
+        "input_tokens": 1284,
+        "input_tokens_details": {
+          "cache_write_tokens": 1281,
+          "cached_tokens": 0
+        },
+        "output_tokens": 741,
+        "output_tokens_details": {
+          "reasoning_tokens": 80
+        },
+        "total_tokens": 2025
+      }
+    }
+  ],
+  "semantic_calls": 3,
+  "semantic_calls_attempted": 4,
+  "status": "INVALID",
+  "terminal_error": "HTTPError: HTTP Error 400: Bad Request"
+}

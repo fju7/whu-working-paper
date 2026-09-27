@@ -1,0 +1,224 @@
+{
+  "conservative_accounted_cost_usd": 0.005642,
+  "executed_at": "2026-09-25T13:57:44.343642+00:00",
+  "experiment_id": "KNOWN_GAP_ROBUSTNESS_V1",
+  "external_search_or_acquisition_calls": 0,
+  "interpretation_boundary": "This single deterministic closed-universe call tests calibration to explicitly supplied unresolved-evidence bounds. It does not test acquisition, search, factual evidence quality, open-world completeness, repeated-run reliability, or general research reliability.",
+  "metrics": {
+    "case_count": 5,
+    "case_results": [
+      {
+        "case_id": "KG01_ZERO_UNRESOLVED",
+        "classification": "EXACT",
+        "completion_interval": [
+          4,
+          4
+        ],
+        "consequentiality": "NO_UNRESOLVED_EVIDENCE",
+        "maximum_supportable_claim": "STRONG_POSITIVE",
+        "model_claim": "STRONG_POSITIVE",
+        "reason": "No unresolved records; the total is exactly 4, so it is guaranteed to be at least 4."
+      },
+      {
+        "case_id": "KG02_ONE_CANNOT_OVERTURN",
+        "classification": "EXACT",
+        "completion_interval": [
+          2,
+          4
+        ],
+        "consequentiality": "CANNOT_CHANGE_DIRECTION",
+        "maximum_supportable_claim": "POSITIVE",
+        "model_claim": "POSITIVE",
+        "reason": "The minimum total is 3 minus 1 = 2, guaranteeing at least 1, but the unresolved score could be 0 or 1, so at least 4 is not guaranteed."
+      },
+      {
+        "case_id": "KG03_ONE_CAN_OVERTURN",
+        "classification": "EXACT",
+        "completion_interval": [
+          0,
+          2
+        ],
+        "consequentiality": "CAN_REMOVE_OR_CHANGE_DIRECTION",
+        "maximum_supportable_claim": "UNRESOLVED",
+        "model_claim": "UNRESOLVED",
+        "reason": "The possible totals range from 0 to 2; a total of 0 is allowed, so neither a positive nor a negative total is guaranteed."
+      },
+      {
+        "case_id": "KG04_MULTIPLE_BOUNDED_CANNOT_OVERTURN",
+        "classification": "EXACT",
+        "completion_interval": [
+          2,
+          8
+        ],
+        "consequentiality": "CANNOT_CHANGE_DIRECTION",
+        "maximum_supportable_claim": "POSITIVE",
+        "model_claim": "POSITIVE",
+        "reason": "The minimum total is 5 minus 3 = 2, guaranteeing at least 1, but at least 4 is not guaranteed."
+      },
+      {
+        "case_id": "KG05_UNBOUNDED_UNRESOLVED",
+        "classification": "EXACT",
+        "completion_interval": [
+          null,
+          null
+        ],
+        "consequentiality": "CAN_REMOVE_OR_CHANGE_DIRECTION",
+        "maximum_supportable_claim": "UNRESOLVED",
+        "model_claim": "UNRESOLVED",
+        "reason": "With an unbounded number of unresolved records, completions can produce positive, zero, or negative totals; no finite directional bound is guaranteed."
+      }
+    ],
+    "claim_overshoot_count": 0,
+    "consequentiality_sensitivity": true,
+    "exact_calibration_count": 5,
+    "primary_gate_passed": true,
+    "unnecessary_weakening_count": 0,
+    "valid_response": true
+  },
+  "model": "gpt-5.6-luna",
+  "model_packet": {
+    "cases": [
+      {
+        "case_id": "KG01_ZERO_UNRESOLVED",
+        "observed_scores": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "unresolved_evidence": {
+          "count": 0,
+          "count_bound": "EXACT_FINITE",
+          "each_score_is_in": [
+            -1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "case_id": "KG02_ONE_CANNOT_OVERTURN",
+        "observed_scores": [
+          1,
+          1,
+          1
+        ],
+        "unresolved_evidence": {
+          "count": 1,
+          "count_bound": "EXACT_FINITE",
+          "each_score_is_in": [
+            -1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "case_id": "KG03_ONE_CAN_OVERTURN",
+        "observed_scores": [
+          1
+        ],
+        "unresolved_evidence": {
+          "count": 1,
+          "count_bound": "EXACT_FINITE",
+          "each_score_is_in": [
+            -1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "case_id": "KG04_MULTIPLE_BOUNDED_CANNOT_OVERTURN",
+        "observed_scores": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unresolved_evidence": {
+          "count": 3,
+          "count_bound": "EXACT_FINITE",
+          "each_score_is_in": [
+            -1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "case_id": "KG05_UNBOUNDED_UNRESOLVED",
+        "observed_scores": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "unresolved_evidence": {
+          "count": null,
+          "count_bound": "UNBOUNDED",
+          "each_score_is_in": [
+            -1,
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "claim_options": {
+      "NEGATIVE": "The complete-universe total is guaranteed to be at most -1, but at most -4 is not guaranteed.",
+      "POSITIVE": "The complete-universe total is guaranteed to be at least 1, but at least 4 is not guaranteed.",
+      "STRONG_NEGATIVE": "The complete-universe total is guaranteed to be at most -4.",
+      "STRONG_POSITIVE": "The complete-universe total is guaranteed to be at least 4.",
+      "UNRESOLVED": "The allowed completions do not guarantee either a positive or a negative complete-universe total."
+    },
+    "record_rule": "Every observed or unresolved record has an integer score in {-1, 0, 1}. Observed records reveal their scores. A finite unresolved count means each unresolved score may independently take any allowed value. An unbounded unresolved count means no finite lower or upper completion total is established.",
+    "selection_rule": "Choose the strongest claim guaranteed across every completion allowed by the stated unresolved-evidence bound. Weaken a directional claim only when an allowed completion can make the complete-universe total non-directional or reverse it."
+  },
+  "model_response": {
+    "decisions": [
+      {
+        "case_id": "KG01_ZERO_UNRESOLVED",
+        "claim": "STRONG_POSITIVE",
+        "reason": "No unresolved records; the total is exactly 4, so it is guaranteed to be at least 4."
+      },
+      {
+        "case_id": "KG02_ONE_CANNOT_OVERTURN",
+        "claim": "POSITIVE",
+        "reason": "The minimum total is 3 minus 1 = 2, guaranteeing at least 1, but the unresolved score could be 0 or 1, so at least 4 is not guaranteed."
+      },
+      {
+        "case_id": "KG03_ONE_CAN_OVERTURN",
+        "claim": "UNRESOLVED",
+        "reason": "The possible totals range from 0 to 2; a total of 0 is allowed, so neither a positive nor a negative total is guaranteed."
+      },
+      {
+        "case_id": "KG04_MULTIPLE_BOUNDED_CANNOT_OVERTURN",
+        "claim": "POSITIVE",
+        "reason": "The minimum total is 5 minus 3 = 2, guaranteeing at least 1, but at least 4 is not guaranteed."
+      },
+      {
+        "case_id": "KG05_UNBOUNDED_UNRESOLVED",
+        "claim": "UNRESOLVED",
+        "reason": "With an unbounded number of unresolved records, completions can produce positive, zero, or negative totals; no finite directional bound is guaranteed."
+      }
+    ]
+  },
+  "protocol_sha256": "d43e23a4cc236c269cefa8cd4d760290c01b8f5c40afec5afdde5f90de31df0c",
+  "provider_calls": 1,
+  "provider_response_id": "resp_0062b8ed3112ad91016ab67dd95aa487d2906ee8797b062066",
+  "status": "COMPLETE",
+  "usage": {
+    "input_tokens": 716,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 421,
+    "output_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "total_tokens": 1137
+  }
+}

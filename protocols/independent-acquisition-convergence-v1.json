@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "WHU-INDEPENDENT-ACQUISITION-CONVERGENCE-V1",
+  "seed_start": 21001,
+  "seed_count": 1600,
+  "partition": {
+    "domain": "WHU_IAC_V1_PARTITION",
+    "holdout_modulus": 5,
+    "holdout_remainder": 0
+  },
+  "generator": {
+    "record_count": [16, 28],
+    "evidence_class_count": [4, 7],
+    "route_count": [6, 9],
+    "route_width": [4, 7],
+    "route_budget": [2, 5],
+    "contribution_values": [-3, -2, -1, 0, 1, 2, 3],
+    "contribution_weights": [2, 3, 4, 5, 4, 3, 2],
+    "route_families": ["BROAD", "CITATION", "REGISTRY"]
+  },
+  "processes": {
+    "A": {
+      "random_domain": "WHU_IAC_V1_PROCESS_A",
+      "route_policy": "LOWEST_OBSERVED_COVERAGE_THEN_ROUTE_ID",
+      "stop_policy": "BUDGET_OR_TWO_ZERO_YIELD"
+    },
+    "B": {
+      "random_domain": "WHU_IAC_V1_PROCESS_B",
+      "route_policy": "HIGHEST_OBSERVED_NOVELTY_THEN_ROUTE_ID",
+      "stop_policy": "BUDGET_OR_FULL_CLASS_COVERAGE_AND_ZERO_YIELD"
+    }
+  },
+  "observable_record_fields": [
+    "source_family_id",
+    "evidence_class",
+    "direction",
+    "magnitude_class"
+  ],
+  "convergence_rule": {
+    "id": "CONVERGENCE_FIXED_V1",
+    "family_jaccard_min": 0.30,
+    "pivotal_jaccard_min": 0.25,
+    "evidence_class_coverage_min_each": 0.60,
+    "pooled_recent_marginal_yield_max": 0.50,
+    "require_claim_band_agreement": true,
+    "require_contrary_presence_agreement": true,
+    "require_no_unresolved_candidates": true
+  },
+  "baselines": {
+    "SEARCH_VOLUME": {"pooled_source_count_min": 14},
+    "MARGINAL_YIELD": {"pooled_recent_marginal_yield_max": 0.25},
+    "COVERAGE_STOPPING": {
+      "evidence_class_coverage_min_each": 0.75,
+      "require_both_frontier_exhausted": true
+    }
+  },
+  "non_vacuity": {
+    "minimum_y_each_partition": {"CALIBRATION": 120, "HOLDOUT": 30},
+    "minimum_assurance_coverage": 0.10,
+    "minimum_assured_count_holdout": 30,
+    "minimum_disagreement_count_holdout": 30,
+    "maximum_exhaustive_union_fraction": 0.10
+  },
+  "success_gate": {
+    "maximum_false_assurance": 0.15,
+    "minimum_assurance_coverage": 0.10,
+    "minimum_relative_false_assurance_reduction_vs_best_eligible_baseline": 0.25,
+    "baseline_minimum_coverage_for_comparison": 0.10
+  },
+  "prohibited_runtime_fields": [
+    "contribution",
+    "complete_band",
+    "y",
+    "omitted_source_family_ids",
+    "minimum_weakening_package_size"
+  ]
+}
