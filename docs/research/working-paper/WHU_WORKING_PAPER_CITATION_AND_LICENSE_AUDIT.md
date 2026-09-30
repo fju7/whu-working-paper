@@ -1,12 +1,12 @@
 # Citation, reference, and third-party-content audit
 
-Date: `2026-09-26`
+Date: `2026-09-30`
 
 ## References
 
-The manuscript has 20 sequentially numbered references. References 1–6 identify repository artifact
+The manuscript has 22 sequentially numbered references. References 1–6 identify repository artifact
 families; the public artifact/evidence map replaces that shorthand with repository-relative paths.
-References 7–20 contain 14 unique, syntactically valid public HTTPS or DOI links. The claims attached
+References 7–22 contain 16 unique, syntactically valid public HTTPS or DOI links. The claims attached
 to those references remain bounded by the previously reviewed adjacent-work matrix. This packaging
 audit did not perform new web research and does not upgrade the bounded literature review into a
 systematic review or a proof of absence.

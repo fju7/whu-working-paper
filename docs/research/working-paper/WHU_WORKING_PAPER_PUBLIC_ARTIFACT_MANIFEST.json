@@ -274,8 +274,8 @@
     },
     {
       "path": "docs/research/WHU_STATE_OF_FIELD_EVIDENCE_ADEQUACY_ADJACENT_WORK_MATRIX.md",
-      "sha256": "dcd1112b701d6622f959828266ed9f8140c06ba800ef95584832a29cc9412a02",
-      "bytes": 21761
+      "sha256": "287dbca9c97f92603afbe2b045635c09d59b51551fb78f4da7fc4720c89a3d31",
+      "bytes": 21774
     },
     {
       "path": "docs/research/WHU_STATE_OF_FIELD_EVIDENCE_ADEQUACY_REVIEW.md",
@@ -329,8 +329,8 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_ARTIFACT_MAP.md",
-      "sha256": "472246fc6fef9cb0504687bccbb0064c433a8c1add92647131d52b641a4e4721",
-      "bytes": 5530
+      "sha256": "97158d520428866b10057cd71eb42dd2399563053f244e427eef7c1065f4047e",
+      "bytes": 5545
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_AVAILABILITY_AND_DISCLOSURE.md",
@@ -339,7 +339,7 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_CITATION_AND_LICENSE_AUDIT.md",
-      "sha256": "27e91eddd36822573dbf9706d86b1c905c8c8b8eb6f82fe29468fffc10a0fca6",
+      "sha256": "410015dc2032ab79c97ae7a028c35f3d1c3f34431e9a570e2d4a7db729856b63",
       "bytes": 2045
     },
     {
