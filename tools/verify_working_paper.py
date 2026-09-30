@@ -39,6 +39,22 @@ def main():
         elif locator.get("type") == "markdown_exact_quote":
             if locator["quote"] not in path.read_text():
                 failures.append(f"Markdown locator mismatch: {entry['cell_id']}")
+        elif locator.get("type") == "derived_ratio_percent":
+            doc = json.loads(path.read_text())
+            numerator_pointer = locator["numerator_pointer"]
+            if isinstance(numerator_pointer, list):
+                numerator = sum(pointer(doc, item) for item in numerator_pointer)
+            elif isinstance(numerator_pointer, dict) and "subtract" in numerator_pointer:
+                minuend, subtrahend = numerator_pointer["subtract"]
+                numerator = pointer(doc, minuend) - pointer(doc, subtrahend)
+            else:
+                numerator = pointer(doc, numerator_pointer)
+            denominator = pointer(doc, locator["denominator_pointer"])
+            actual = round(numerator / denominator * 100, locator["decimals"])
+            if actual != entry["reported_value"]:
+                failures.append(
+                    f"derived value mismatch: {entry['cell_id']} expected {entry['reported_value']!r}, got {actual!r}"
+                )
         else:
             failures.append(f"unsupported locator: {entry['cell_id']}")
 
@@ -78,6 +94,13 @@ def main():
         failures.append("missing explicit unopened-holdout boundary")
     if "Fable produced no semantic capability evidence" not in manuscript:
         failures.append("missing Fable boundary")
+    for boundary in [
+        "do not establish a capability–assurance asymmetry or scaling law",
+        "No Bayes-optimal or oracle risk–coverage frontier was prespecified or computed",
+        "512 of 706 adequate cases were withheld (72.52%)",
+    ]:
+        if boundary not in manuscript:
+            failures.append(f"missing v1.0.2 correction boundary: {boundary}")
 
     if failures:
         print("FAIL")

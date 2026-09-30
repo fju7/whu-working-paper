@@ -565,6 +565,122 @@
       "verifier_result": "PASS"
     },
     {
+      "cell_id": "Context.V3.omission_n",
+      "reported_value": 93,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_CLOSEOUT.md",
+      "source_locator": {
+        "type": "markdown_exact_quote",
+        "quote": "The untouched holdout contains 240 observations (`Y=0: 147`, `Y=1: 93`)."
+      },
+      "source_sha256": "e1e9756bfa87693c58f41ee52fa3a4294f96f61fd64777ff084f5732c2bba702",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Context.V3.omission_d",
+      "reported_value": 240,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": "/holdout_rows",
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Context.V3.omission_percent",
+      "reported_value": 38.75,
+      "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",
+      "source_locator": {
+        "type": "derived_ratio_percent",
+        "numerator_pointer": [
+          "/comparators/C_DECISION_TABLE/assured_y1",
+          "/comparators/C_DECISION_TABLE/non_assured_y1"
+        ],
+        "denominator_pointer": "/holdout_rows",
+        "decimals": 2
+      },
+      "source_sha256": "80cedc9324d98dee11c6ba94b994f112e4ca3ddc88d7c5805699149701fb8b80",
+      "validity_role": "VALID_SYNTHETIC_HOLDOUT_CONTEXT",
+      "transform": "numerator / denominator * 100, rounded to 2 decimals",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Context.V2.omission_n",
+      "reported_value": 588,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json",
+      "source_locator": "/requirements/1/witness/CALIBRATION/y1",
+      "source_sha256": "9931e0bb2abd9a8c7f8bd8a9e8b87938b27bdd3cb2a692d7f5dca277abbef353",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Context.V2.omission_d",
+      "reported_value": 1294,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json",
+      "source_locator": "/requirements/1/witness/CALIBRATION/rows",
+      "source_sha256": "9931e0bb2abd9a8c7f8bd8a9e8b87938b27bdd3cb2a692d7f5dca277abbef353",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION_CONTEXT",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Context.V2.omission_percent",
+      "reported_value": 45.44,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json",
+      "source_locator": {
+        "type": "derived_ratio_percent",
+        "numerator_pointer": "/requirements/1/witness/CALIBRATION/y1",
+        "denominator_pointer": "/requirements/1/witness/CALIBRATION/rows",
+        "decimals": 2
+      },
+      "source_sha256": "9931e0bb2abd9a8c7f8bd8a9e8b87938b27bdd3cb2a692d7f5dca277abbef353",
+      "validity_role": "VALID_NEGATIVE_CALIBRATION_CONTEXT",
+      "transform": "numerator / denominator * 100, rounded to 2 decimals",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Sensitivity.V2.false_withholding_n",
+      "reported_value": 512,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_CALIBRATION_RESULT.json",
+      "source_locator": "/primary/false_withholding/numerator",
+      "source_sha256": "01c5c0146cbea9381f269bfa973419375bde12fde2bd96a6784a394d898e64a2",
+      "validity_role": "DERIVED_CROSS_DEFINITION_SENSITIVITY",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Sensitivity.V2.false_withholding_d",
+      "reported_value": 706,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json",
+      "source_locator": "/requirements/1/witness/CALIBRATION/y0",
+      "source_sha256": "9931e0bb2abd9a8c7f8bd8a9e8b87938b27bdd3cb2a692d7f5dca277abbef353",
+      "validity_role": "DERIVED_CROSS_DEFINITION_SENSITIVITY",
+      "transform": "none",
+      "verifier_result": "PASS"
+    },
+    {
+      "cell_id": "Sensitivity.V2.false_withholding_percent",
+      "reported_value": 72.52,
+      "source_path": "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json",
+      "source_locator": {
+        "type": "derived_ratio_percent",
+        "numerator_pointer": {
+          "subtract": [
+            "/requirements/1/witness/CALIBRATION/y0",
+            "/requirements/1/witness/CALIBRATION/converged_y0"
+          ]
+        },
+        "denominator_pointer": "/requirements/1/witness/CALIBRATION/y0",
+        "decimals": 2
+      },
+      "source_sha256": "9931e0bb2abd9a8c7f8bd8a9e8b87938b27bdd3cb2a692d7f5dca277abbef353",
+      "validity_role": "DERIVED_CROSS_DEFINITION_SENSITIVITY",
+      "transform": "numerator / denominator * 100, rounded to 2 decimals",
+      "verifier_result": "PASS"
+    },
+    {
       "cell_id": "Methods.V3.calibration_rows",
       "reported_value": 960,
       "source_path": "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_RESULTS.json",

@@ -1,6 +1,6 @@
 # Reasoning Over Evidence Is Not Assurance That the Evidence Was Acquired
 
-**Working Paper v1.0.1 — September 2026**
+**Working Paper v1.0.2 — September 2026**
 
 **Frederick Ugast — Independent Researcher**
 

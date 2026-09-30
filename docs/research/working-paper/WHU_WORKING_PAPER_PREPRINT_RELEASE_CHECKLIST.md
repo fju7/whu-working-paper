@@ -7,7 +7,7 @@ Status: owner-authorized Working Paper v1.0 release.
 - [x] authoritative Markdown manuscript and review HTML;
 - [x] six deterministic SVG figures and six supplementary tables;
 - [x] public landing README, artifact/evidence map, and offline reproduction guide;
-- [x] 81-entry quantitative provenance manifest and deterministic verifier;
+- [x] quantitative provenance manifest and deterministic verifier;
 - [x] frozen result summaries and exact closeouts named in the public artifact manifest;
 - [x] evidence-status legend and explicit valid/descriptive/exploratory/invalid/history boundaries;
 - [x] limitations/non-reproducible-items register;
@@ -29,7 +29,7 @@ Status: owner-authorized Working Paper v1.0 release.
 ## Deterministic release gates
 
 - [x] clean final release commit and immutable tag recorded on the public repository and canonical receipt;
-- [x] `tools/verify_working_paper.py` passes all 81 entries and paper boundaries;
+- [x] `tools/verify_working_paper.py` passes all entries and paper boundaries;
 - [x] `tools/verify_working_paper_release.py` passes inventory, hash, path, label, and deny-list checks;
 - [x] figures and exact-number manifest rebuild with no diff;
 - [x] review HTML rebuilds with no diff;

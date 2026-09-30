@@ -2,13 +2,13 @@
 
 Release status: **public working-paper release**.
 
-Version: **Working Paper v1.0.1, September 2026**
+Version: **Working Paper v1.0.2, September 2026**
 
 Author: **Frederick Ugast, Independent Researcher**
 
 Canonical repository: <https://github.com/fju7/whu-working-paper>
 
-Immutable release tag: `working-paper-v1.0.1`
+Immutable release tag: `working-paper-v1.0.2`
 
 This directory contains the reviewed working paper *Reasoning Over Evidence Is Not Assurance That the
 Evidence Was Acquired* and the public repository package that supports it. The paper is an

@@ -1,11 +1,11 @@
 # Data, code, authorship, and disclosure statement
 
-Status: public release statement for Working Paper v1.0.
+Status: public release statement for Working Paper v1.0.2.
 
 ## Data and code availability
 
 The public snapshot contains the manuscript, deterministic figures, supplementary tables,
-the 81-entry exact-number provenance manifest, the frozen result summaries needed for the paper's
+the exact-number provenance manifest, the frozen result summaries needed for the paper's
 quantitative claims, the relevant closeouts and governance records, and the standard-library build and
 verification scripts. Repository-relative paths and SHA-256 hashes are recorded in the artifact
 manifest.
@@ -29,7 +29,7 @@ retained publication and outreach control.
 AI agents materially assisted with research design, code and artifact construction, execution of
 authorized workflows, deterministic scoring, synthesis, drafting, review, and documentation. A fresh
 AI-model reviewer examined the manuscript package, identified one material provenance-coverage defect,
-and rechecked the corrected 81-entry manifest. The preprint-package reconstruction test was likewise
+and rechecked the corrected provenance manifest. The preprint-package reconstruction test was likewise
 performed by a separate AI-agent context using only the proposed public package.
 
 AI systems are not authors, cannot take responsibility for the work, and do not constitute human

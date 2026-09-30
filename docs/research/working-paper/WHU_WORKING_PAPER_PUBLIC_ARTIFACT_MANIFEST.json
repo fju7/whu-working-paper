@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "candidate_identifier": "WHU-WP-2026-09-27-v1.0.1",
+  "candidate_identifier": "WHU-WP-2026-09-30-v1.0.2",
   "reviewed_manuscript_baseline_commit": "1b2821f451dae0b895eb1c4f46b84e3638cf5636",
   "audit_parent_commit": "bdb618a9fab611c2e88684822381071394f46650",
   "release_authorized": true,
@@ -9,13 +9,13 @@
   "files": [
     {
       "path": "README.md",
-      "sha256": "ef9328ebc311a92cd9018263eb13334848552055e936ce8df9a48a949377ef50",
+      "sha256": "19af6a00baa671ef0fe7994661820edff5fce5b9f8f948f63ed7d33b52366bbc",
       "bytes": 1492
     },
     {
       "path": "CORRECTIONS.md",
-      "sha256": "7e2c5e98ba5f355f04e79d40d7b72dc161e4bc411068f21c4170a558d4cbf327",
-      "bytes": 575
+      "sha256": "5da70904223e8826d5e9ac0b37182c2b5cbfb0081ccdbe9b87995f2909d88017",
+      "bytes": 1878
     },
     {
       "path": "LICENSE.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "83af8446142443630e62971c363b98253541bd7aad11522cc383b89778164868",
+      "sha256": "df06f5e2d8067f8cac5a35575c7279204fb7db854d43c8578be864a9e1fb6b84",
       "bytes": 681
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "tools/build_working_paper_artifacts.py",
-      "sha256": "a719c24a8abca7446e3c8f8d20959909d4715f05a68bdc1ddb5081846b68692e",
-      "bytes": 22437
+      "sha256": "c1afc46594d6c0c60fdfaa2c020bcff3af58828cfd46a3858fe2f19800dd3588",
+      "bytes": 25273
     },
     {
       "path": "tools/render_working_paper.py",
@@ -44,12 +44,12 @@
     },
     {
       "path": "tools/verify_working_paper.py",
-      "sha256": "f93bad99fa62a69b290eef4bb2ebf67fdac641092ccf3809195450c57e187a63",
-      "bytes": 4272
+      "sha256": "1ff832fcd9ea1f9c812c6bccbba08da86a174cf3311f4d3a2b4c37af997a760d",
+      "bytes": 5635
     },
     {
       "path": "tools/verify_working_paper_release.py",
-      "sha256": "17b585bb00cf868175b6584b874c435f8acc632061fe5b376a50bcd99b1a265b",
+      "sha256": "0b3ef957cfe96932b4265cc8d0e2da3fa0744099ced058fac23fe74cdcaf092e",
       "bytes": 13879
     },
     {
@@ -309,8 +309,8 @@
     },
     {
       "path": "docs/research/WHU_WORKING_PAPER_CLAIM_LEDGER.md",
-      "sha256": "90a01788ff686ae51a48f8f650add8cc392f3802b34b770bb2514f26b5c8a363",
-      "bytes": 6130
+      "sha256": "1f424be5a5b9530f24c19d4750a767543661be71d91beeda5cc1df941cd96291",
+      "bytes": 6643
     },
     {
       "path": "docs/research/WHU_WORKING_PAPER_EVIDENCE_INVENTORY.md",
@@ -324,18 +324,18 @@
     },
     {
       "path": "docs/research/working-paper/README.md",
-      "sha256": "d0670a4a4066191cc3bddb13925bec723f29a3a271d3446c8d34531040addab1",
+      "sha256": "f35e18d953e8f8952d7f2e9f77c2a952c9cb56a5d678c35968b74a166966d793",
       "bytes": 4296
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_ARTIFACT_MAP.md",
-      "sha256": "06053ee0311191cc9cc07f0ae90670e868f73379e1833be72d5863acf21ce759",
-      "bytes": 5236
+      "sha256": "472246fc6fef9cb0504687bccbb0064c433a8c1add92647131d52b641a4e4721",
+      "bytes": 5530
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_AVAILABILITY_AND_DISCLOSURE.md",
-      "sha256": "5ea821936c751e3d6cf8b89fbab0911e6c2e8f844d34dc2721e799118e95c1bd",
-      "bytes": 3587
+      "sha256": "7ef82f9cb90199c59af43fb5fdf69a04afe58a8cba6b8fe3ed34406aaf823769",
+      "bytes": 3582
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_CITATION_AND_LICENSE_AUDIT.md",
@@ -344,8 +344,8 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_EXACT_NUMBER_MANIFEST.json",
-      "sha256": "d60739e9c2315a17aa50a39b3bdcf29cc4e603cec9fda7518df9f0e796528485",
-      "bytes": 37752
+      "sha256": "2a125f323fd9d968879c58edd4b4dc4e3a368ba4e624ab84355d88a5b5c85dee",
+      "bytes": 42875
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_LIMITATIONS_REGISTER.md",
@@ -354,13 +354,13 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_MANUSCRIPT.html",
-      "sha256": "c8a606d3415ff4a1ac1f04387d95861a6a407f7a47d6899094a3ab8d681c0092",
-      "bytes": 37219
+      "sha256": "d171af1e94c736939e85c2c3b22902b1b178e12692948165af21b0cda96aea2b",
+      "bytes": 39963
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_MANUSCRIPT.md",
-      "sha256": "9099f8a76e662b65d46f2bfb673f1303a9caf30c7b1dec8918c2218e0357cce9",
-      "bytes": 34232
+      "sha256": "e935a54096bef252a462ac54f814e07598806c9cb38984cebe005c178f7992d4",
+      "bytes": 36935
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_OUTSIDE_RECONSTRUCTION_REVIEW.md",
@@ -374,8 +374,8 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_TEST_CLASSIFICATION.md",
-      "sha256": "4757e412df4ef4a09d0a90364dfdd7d5d824db1af7fb94dfba444050746b24f7",
-      "bytes": 16279
+      "sha256": "c5ea1cb4be5eb1c75d1b1dc2096acc2b8d6bc66380427099c6b7ead85fd1288c",
+      "bytes": 16299
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_PUBLIC_CONTRACT_REDESIGN.md",
@@ -399,13 +399,13 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_PREPRINT_RELEASE_CHECKLIST.md",
-      "sha256": "de3bfb4b288a5ccdc01f4ffaf0d8b0f08335a47f747523ef5cf34257fd065eb6",
-      "bytes": 3229
+      "sha256": "30e30129d95e2ff22793a5452804a38d6226135f35cca51dd3bbde86d86d4a51",
+      "bytes": 3217
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_REPRODUCTION.md",
-      "sha256": "3066821c7fd50cd8a5268ff9198074a24ef4183f0ca4161cbf61cd36b80f02ba",
-      "bytes": 3126
+      "sha256": "6e588e372fd99bcb5942259137587c604b1756d4e3ac867a2421f95367f8dfbd",
+      "bytes": 3114
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_REPRODUCIBILITY_AUDIT_DECISION.md",
@@ -419,13 +419,13 @@
     },
     {
       "path": "docs/research/working-paper/WHU_WORKING_PAPER_SUPPLEMENTARY_TABLES.md",
-      "sha256": "1b1cd988a6738cc5145a6cbd9175cae9e863045f11b9ba0d1c4f9318734ebe9c",
-      "bytes": 14723
+      "sha256": "420034293e863ed98499b0a0cd936d3a905b4a7bd00bd036f7b4c2fbaa79f6ef",
+      "bytes": 15275
     },
     {
       "path": "docs/research/working-paper/figures/figure-1-construct-map.svg",
-      "sha256": "ca7a582e3d3fcfc870f061257115c2d18ca8fb9faa7eb9b0b0c179ecd1a955d0",
-      "bytes": 2411
+      "sha256": "4ae6658a390d39c45dbdbdba70969b1960aa16201f158f5abb38644263756132",
+      "bytes": 2420
     },
     {
       "path": "docs/research/working-paper/figures/figure-2-chronology.svg",
@@ -444,8 +444,8 @@
     },
     {
       "path": "docs/research/working-paper/figures/figure-5-assurance-panels.svg",
-      "sha256": "92be7636690b4cb3a8166195b75836fdd960a9ad3205893dc0c3c61ada28a3a6",
-      "bytes": 3667
+      "sha256": "cd4dbd694d5666d3bb50179c524cfb292724b673ffd287ac8fa6f54431bb4d02",
+      "bytes": 3858
     },
     {
       "path": "docs/research/working-paper/figures/figure-6-measurement-failures.svg",

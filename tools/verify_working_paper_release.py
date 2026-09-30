@@ -152,7 +152,7 @@ def payload() -> dict:
         files.append({"path": rel, "sha256": digest(path), "bytes": path.stat().st_size})
     return {
         "schema_version": "1.0",
-        "candidate_identifier": "WHU-WP-2026-09-27-v1.0.1",
+        "candidate_identifier": "WHU-WP-2026-09-30-v1.0.2",
         "reviewed_manuscript_baseline_commit": "1b2821f451dae0b895eb1c4f46b84e3638cf5636",
         "audit_parent_commit": "bdb618a9fab611c2e88684822381071394f46650",
         "release_authorized": True,

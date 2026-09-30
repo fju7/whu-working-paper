@@ -27,7 +27,7 @@ python3 tools/recompute_working_paper_empirical_results.py
 python3 tools/verify_working_paper_rebuild.py
 ```
 
-Expected results are `PASS` for all 81 exact-number entries, all six figures, all six tables, the
+Expected results are `PASS` for all exact-number entries, all six figures, all six tables, the
 required evidence boundaries, the public artifact inventory, integrity hashes, link/path checks, the
 privacy/security deny-list, the unopened-holdout custody evidence, independent recomputation of the
 V3 and convergence V2 empirical results, and byte-identical derived artifacts.
@@ -35,7 +35,7 @@ V3 and convergence V2 empirical results, and byte-identical derived artifacts.
 ## Deterministic artifact rebuild
 
 The single rebuild verifier snapshots the designated outputs in memory, rebuilds the six SVG figures,
-the 81-entry exact-number manifest, and the HTML, and compares the resulting bytes without requiring
+the exact-number manifest, and the HTML, and compares the resulting bytes without requiring
 Git metadata:
 
 ```sh

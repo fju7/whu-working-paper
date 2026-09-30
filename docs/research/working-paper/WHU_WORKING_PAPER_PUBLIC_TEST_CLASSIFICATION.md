@@ -84,8 +84,8 @@ responses or historical observations. Public result reproduction is instead perf
 | Public check | Category | Coverage |
 |---|---|---|
 | `python3 tools/recompute_working_paper_empirical_results.py` | `PUBLIC_RESULT_REPRODUCTION` | Refits the frozen V3 calibration model, reselects its threshold rules, recomputes every V3 consumed-evaluation metric, and recomputes every convergence V2 calibration metric/baseline/ratio/gate from released synthetic rows and labels. It has no V2 holdout input. |
-| `python3 tools/verify_working_paper_rebuild.py` | `PUBLIC_RESULT_REPRODUCTION` | Rebuilds all six figures, the 81-entry exact-number manifest, and the designated HTML and performs byte comparisons without Git metadata. |
-| `python3 tools/verify_working_paper.py` | `PUBLIC_PROVENANCE_INTEGRITY` | Checks all 81 values against exact JSON pointers or exact closeout quotations and source hashes; checks six figures, six tables, and every required evidence status. |
+| `python3 tools/verify_working_paper_rebuild.py` | `PUBLIC_RESULT_REPRODUCTION` | Rebuilds all six figures, the exact-number manifest, and the designated HTML and performs byte comparisons without Git metadata. |
+| `python3 tools/verify_working_paper.py` | `PUBLIC_PROVENANCE_INTEGRITY` | Checks all displayed values against exact JSON pointers, transparent arithmetic, or exact closeout quotations and source hashes; checks six figures, six tables, and every required evidence status. |
 | `python3 tools/verify_working_paper_release.py --strict-tree` | `PUBLIC_PROVENANCE_INTEGRITY` | Requires the physical snapshot to equal the manifest set, then checks hashes, local links, evidence labels, privacy/security deny-list, and forbidden V2 generation paths/signatures. |
 | `python3 tools/verify_working_paper_custody.py` | `PUBLIC_PROVENANCE_INTEGRITY` | Checks the V2 holdout commitment, the recorded no-authorization/no-metrics disposition, protected-file exclusion, calibration-result binding, and absence of a holdout-derived paper result. |
 
@@ -95,7 +95,7 @@ signatures enter the public candidate.
 
 ## What an outside researcher can and cannot reproduce
 
-An outside researcher can rebuild every designated derived paper artifact, verify all 81 quantitative
+An outside researcher can rebuild every designated derived paper artifact, verify all quantitative
 locators, refit and reproduce the V3 calibration/evaluation outputs from released synthetic rows,
 recompute the full convergence V2 calibration result from released calibration-only rows and labels,
 recover every valid/descriptive/exploratory/invalid/stopped/methodological status, and verify that V2

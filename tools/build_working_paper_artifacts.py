@@ -71,6 +71,24 @@ def markdown_entry(cell, value, path, exact_quote, role, transform="none"):
     }
 
 
+def derived_ratio_entry(cell, value, path, numerator_pointer, denominator_pointer, role, decimals=2):
+    return {
+        "cell_id": cell,
+        "reported_value": value,
+        "source_path": path,
+        "source_locator": {
+            "type": "derived_ratio_percent",
+            "numerator_pointer": numerator_pointer,
+            "denominator_pointer": denominator_pointer,
+            "decimals": decimals,
+        },
+        "source_sha256": sha(path),
+        "validity_role": role,
+        "transform": f"numerator / denominator * 100, rounded to {decimals} decimals",
+        "verifier_result": "PASS",
+    }
+
+
 def main():
     FIG.mkdir(parents=True, exist_ok=True)
     a_path = "benchmark-results/closed-universe-claim-strength-stage-a-v1.json"
@@ -87,9 +105,9 @@ def main():
     labels = [
         ("1. Supplied-evidence reasoning", "tested positive / mixed", "ok"),
         ("2. Acquisition adequacy", "tested; frozen gate failed", "fail"),
-        ("3. Acquisition assurance", "signal; absolute gate limits", "mix"),
+        ("3. Acquisition assurance", "bounded synthetic results", "mix"),
         ("4. System composition", "not established", "none"),
-        ("5. Economics", "exploratory only", "method"),
+        ("5. Economics", "untested scenario hypothesis", "method"),
         ("6. User decision policy", "not established", "none"),
     ]
     body = ""
@@ -149,13 +167,14 @@ def main():
     # Figure 5: distinct risk/coverage panels.
     v3_rows = [(k, d['assurance_coverage']*100, d['false_assurance']*100, d['false_assurance_numerator'], d['false_assurance_denominator']) for k,d in v3['comparators'].items()]
     cv2_rows = [("Convergence rule", cv2['primary']['assurance_coverage']['rate']*100, cv2['primary']['false_assurance']['rate']*100, 87, 281)] + [(k, d['assurance_coverage']['rate']*100, d['false_assurance']['rate']*100, d['false_assurance']['numerator'], d['false_assurance']['denominator']) for k,d in cv2['baselines'].items()]
-    body = box(45, 105, 540, 500, "box") + text(65, 140, "Panel A — V3 holdout (n=240)", "h") + text(65, 166, "No outcome/reliability pass threshold was prespecified", "small")
+    body = box(45, 105, 540, 500, "box") + text(65, 140, "Panel A — V3 holdout (n=240; Y=1: 93, 38.75%)", "h") + text(65, 166, "No outcome/reliability pass threshold was prespecified", "small")
     for i,(name,cov,fa,num,den) in enumerate(v3_rows):
         y=210+i*67; body += text(70,y,name,"small")+text(300,y,f"coverage {cov:.2f}%","b")+text(470,y,f"FA {num}/{den} ({fa:.2f}%)","b","middle")
-    body += box(615, 105, 540, 500, "box") + text(635, 140, "Panel B — convergence V2 calibration (n=1,294)", "h") + text(635, 166, "Frozen absolute false-assurance maximum: 15%", "small")
+    body += box(615, 105, 540, 500, "box") + text(635, 140, "Panel B — V2 calibration (n=1,294; Y=1: 588, 45.44%)", "h") + text(635, 166, "Frozen absolute false-assurance maximum: 15%", "small")
     for i,(name,cov,fa,num,den) in enumerate(cv2_rows):
         y=220+i*82; body += text(640,y,name,"small")+text(840,y,f"coverage {cov:.2f}%","b")+text(1030,y,f"FA {num}/{den} ({fa:.2f}%)","b","middle")
-    body += text(600, 650, "DIFFERENT SYNTHETIC DISTRIBUTIONS — NO CROSS-PANEL COMPARISON OR POOLING", "h", "middle")
+    body += text(600, 630, "V2 withheld-set composition: 512/1,013 adequate (50.54%); V3-aligned false withholding: 512/706 (72.52%)", "small", "middle")
+    body += text(600, 655, "DIFFERENT SYNTHETIC DISTRIBUTIONS — NO CROSS-PANEL COMPARISON OR POOLING", "h", "middle")
     write_figure("figure-5-assurance-panels.svg", "Figure 5. Assurance risk and coverage", "Observed descriptive fractions, not production rates or confidence bounds", body, height=690)
 
     # Figure 6: taxonomy of program measurement failures.
@@ -227,6 +246,15 @@ def main():
         manifest_entry("F5B.chance_ratio", 2.701923076923077, cv2_path, "/chance_agreement/observed_to_chance_ratio", "VALID_NEGATIVE_CALIBRATION", "display rounded to 2.702x"),
         manifest_entry("Results.Convergence.false_withholding_n", 512, cv2_path, "/primary/false_withholding/numerator", "VALID_NEGATIVE_CALIBRATION"),
         manifest_entry("Results.Convergence.false_withholding_d", 1013, cv2_path, "/primary/false_withholding/denominator", "VALID_NEGATIVE_CALIBRATION"),
+        markdown_entry("Context.V3.omission_n", 93, "docs/research/ACQUISITION_ASSURANCE_V3_EMPIRICAL_CLOSEOUT.md", "The untouched holdout contains 240 observations (`Y=0: 147`, `Y=1: 93`).", "VALID_SYNTHETIC_HOLDOUT_CONTEXT"),
+        manifest_entry("Context.V3.omission_d", 240, v3_path, "/holdout_rows", "VALID_SYNTHETIC_HOLDOUT_CONTEXT"),
+        derived_ratio_entry("Context.V3.omission_percent", 38.75, v3_path, ["/comparators/C_DECISION_TABLE/assured_y1", "/comparators/C_DECISION_TABLE/non_assured_y1"], "/holdout_rows", "VALID_SYNTHETIC_HOLDOUT_CONTEXT"),
+        manifest_entry("Context.V2.omission_n", 588, "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json", "/requirements/1/witness/CALIBRATION/y1", "VALID_NEGATIVE_CALIBRATION_CONTEXT"),
+        manifest_entry("Context.V2.omission_d", 1294, "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json", "/requirements/1/witness/CALIBRATION/rows", "VALID_NEGATIVE_CALIBRATION_CONTEXT"),
+        derived_ratio_entry("Context.V2.omission_percent", 45.44, "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json", "/requirements/1/witness/CALIBRATION/y1", "/requirements/1/witness/CALIBRATION/rows", "VALID_NEGATIVE_CALIBRATION_CONTEXT"),
+        manifest_entry("Sensitivity.V2.false_withholding_n", 512, cv2_path, "/primary/false_withholding/numerator", "DERIVED_CROSS_DEFINITION_SENSITIVITY"),
+        manifest_entry("Sensitivity.V2.false_withholding_d", 706, "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json", "/requirements/1/witness/CALIBRATION/y0", "DERIVED_CROSS_DEFINITION_SENSITIVITY"),
+        derived_ratio_entry("Sensitivity.V2.false_withholding_percent", 72.52, "docs/research/INDEPENDENT_ACQUISITION_CONVERGENCE_V2_SATISFIABILITY_RECEIPT.json", {"subtract": ["/requirements/1/witness/CALIBRATION/y0", "/requirements/1/witness/CALIBRATION/converged_y0"]}, "/requirements/1/witness/CALIBRATION/y0", "DERIVED_CROSS_DEFINITION_SENSITIVITY"),
         manifest_entry("Methods.V3.calibration_rows", 960, v3_path, "/calibration_rows", "VALID_SYNTHETIC_HOLDOUT"),
         manifest_entry("Methods.V3.holdout_rows", 240, v3_path, "/holdout_rows", "VALID_SYNTHETIC_HOLDOUT"),
         manifest_entry("Table2.Falsifier.exact_cases", 8, fi_path, "/metrics/exact_case_count", "VALID_EMPIRICAL_MIXED"),
